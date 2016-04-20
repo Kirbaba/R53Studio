@@ -75,7 +75,7 @@ function add_scripts() { // добавление скриптов
     if(is_admin()) return false; // если мы в админке - ничего не делаем
     wp_deregister_script('jquery'); // выключаем стандартный jquery
     wp_enqueue_script('libs',get_template_directory_uri().'/js/libs.min.js','','',true); // добавляем свой
-    wp_enqueue_script('custom-scripts', get_template_directory_uri().'/js/script.min.js','','',true); // бутстрап
+    wp_enqueue_script('custom-scripts', get_template_directory_uri().'/js/script.js','','',true); // бутстрап
     wp_enqueue_script('main', get_template_directory_uri().'/js/main.js','','',true); // и скрипты шаблона
 	wp_localize_script('main', 'myajax',
 		array(

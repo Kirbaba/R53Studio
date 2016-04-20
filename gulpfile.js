@@ -64,6 +64,13 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('js')); // Выгружаем в папку app/js
 });
 
+gulp.task('compress', function() {
+  return gulp.src('app/js/*.js')    
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest('js'));
+    
+});
+
 /*gulp.task('css-libs', ['sass'], function() {
     return gulp.src('app/css/libs.css') // Выбираем файл для минификации
         .pipe(cssnano()) // Сжимаем
@@ -73,10 +80,12 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('css')); // Выгружаем в папку app/css
 });*/
 
-gulp.task('watch', ['browser-sync', 'scripts'], function() {
+gulp.task('watch', ['browser-sync', 'scripts', 'compress'], function() {
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
-    gulp.watch('./**/*.php', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
-    gulp.watch('app/js/**/*.js', browserSync.reload); // Наблюдение за JS файлами в папке js
+    gulp.watch('./**/*.php', browserSync.reload); // Наблюдение за HTML файлами в корне проекта    
+    gulp.watch('app/js/*', function() {
+       gulp.run('compress');
+  }, browserSync.reload); // Наблюдение за JS файлами в папке js
 });
 
 /*gulp.task('clean', function() {

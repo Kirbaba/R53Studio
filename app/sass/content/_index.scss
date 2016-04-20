@@ -1,2 +1,19 @@
+.site-content {
+	float: left;
+	width: 100%;
+	min-height: 91vh;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	background-position: 50% 50%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding-top: 15px;
+}
 
+.bg_day {
+	background-image: url('../img/trade-center-day.jpg');
+}
 
