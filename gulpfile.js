@@ -11,13 +11,14 @@ var gulp = require('gulp'), // Подключаем Gulp
     cache = require('gulp-cache'), // Подключаем библиотеку кеширования
     autoprefixer = require('gulp-autoprefixer'); // Подключаем библиотеку для автоматического добавления префиксов
 
-gulp.task('sass-libs', function() { // Создаем таск Sass
-    return gulp.src('app/libs/libs.scss') // Берем источник
-        .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass       
-        .pipe(cssnano()) // Сжимаем
-        .pipe(rename({
-            suffix: '.min'
-        }))
+gulp.task('css-libs', function() { // Создаем таск Sass
+    return gulp.src([
+            'app/libs/owl/owl-carousel/owl.carousel.css',
+            'app/libs/owl/owl-carousel/owl.theme.css',
+            'app/libs/owl/owl-carousel/owl.transitions.css',            
+        ]) // Берем источник        
+        .pipe(cssnano())
+        .pipe(concat('libs.min.css'))
         .pipe(gulp.dest('css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({
             stream: true
@@ -57,7 +58,8 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
             'app/libs/jquery/dist/jquery.min.js',
-            'app/libs/bootstrap/dist/js/bootstrap.min.js', // Берем jQuery
+            'app/libs/bootstrap/dist/js/bootstrap.min.js',
+             'app/libs/owl/owl-carousel/owl.carousel.min.js', // Берем jQuery
         ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл

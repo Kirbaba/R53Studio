@@ -39,7 +39,6 @@
 		background-color: #000;
 		@include box-shadow(inset 0 0 7px rgba(255,255,255,.4));
 		@include background-image(linear-gradient(bottom, #abd7e3 0%, #f5f9fb 100%));
-
 	}
 }
 

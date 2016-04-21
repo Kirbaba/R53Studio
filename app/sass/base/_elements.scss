@@ -74,3 +74,15 @@
 		}
 	}
 }
+
+.owl_modal__item {
+	display: block;
+	width: 107px;
+	height: 74px;
+	border: 1px solid #fff;
+	margin: 10px;
+	@include overflow-img;
+	img {
+		
+	}
+}

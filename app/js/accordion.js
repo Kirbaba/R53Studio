@@ -1,7 +1,8 @@
 jQuery(document).ready(function($) {
   var allPanels = $('.accordion > ul').hide();
     
-  $('.accordion > h3 > a').click(function() {
+  $('.accordion > h3 > a').click(function(event) {
+      event.preventDefault();
       if ($(this).parent().next().is('ul')) {
         $('.accordion h3').removeClass('active-title');
         $(this).parent().addClass('active-title');

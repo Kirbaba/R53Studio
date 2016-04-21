@@ -30,6 +30,16 @@
 		    left: 70%;
 		}
 	}
+	.modal {
+		&__home {			
+			&_lightbox {
+			    background-position: 54% 76%;
+			     .modal__home_body {
+		    		top: 40vh;
+	    		}
+			}
+		}
+	}
 }
 
 @media only screen and (max-width: 1024px) {

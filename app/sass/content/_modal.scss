@@ -1,0 +1,48 @@
+.modal {
+	&__home {
+		position: absolute;		
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url('../img/dark-bg.png');
+		-webkit-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
+		background-repeat: no-repeat;
+		&_lightbox {
+			display: none;
+		    background-size: 200%;
+		    background-repeat: no-repeat;
+		    background-position: 53% 52%;
+		    .modal__home_body {
+		    	top: 52vh;
+		    	margin-left: 275px;
+		    }
+		}
+		&_body {
+			display: block;
+			position: absolute;
+			width: 380px;
+			color: #FFF;
+			font-family: $scada;
+			h3 {
+				font-size: 18px;
+				text-decoration: underline;
+			}
+			p {
+				font-size: 16px;
+			}
+		}
+		&_close {
+			position: absolute;
+			top: 0;
+			right: -30px;
+			width: 30px;
+			height: 30px;
+			background-image: url('../img/error-transparent.png');
+			background-repeat: no-repeat;
+			
+		}
+	}
+}
