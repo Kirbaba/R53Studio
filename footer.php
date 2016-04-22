@@ -34,19 +34,22 @@
 				<p>Светодиодное табло – это эффективный маркетинговый ход и надежное средство подачи информации. Изображение на светодиодном приборе будет различимо даже при расстоянии в 20 до 100 метров.</p>
 				
 				<div class="owl-carousel owl-theme owl_modal">
-					<a href="#" class="owl_modal__item">
+					<a href="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" data-lightbox="modal__home_lightbox" class="owl_modal__item">
 						<img src="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" alt="" />
 					</a>
-					<a href="#" class="owl_modal__item">
+					<a href="<?php bloginfo('template_directory'); ?>/img/trade-center-day.jpg" data-lightbox="modal__home_lightbox" class="owl_modal__item">
+						<img src="<?php bloginfo('template_directory'); ?>/img/trade-center-day.jpg" alt="" />
+					</a>
+					<a href="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" data-lightbox="modal__home_lightbox" class="owl_modal__item">
 						<img src="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" alt="" />
 					</a>
-					<a href="#" class="owl_modal__item">
-						<img src="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" alt="" />
-					</a>
-					<a href="#" class="owl_modal__item">
+					<a href="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" data-lightbox="modal__home_lightbox" class="owl_modal__item">
 						<img src="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" alt="" />
 					</a>
 				</div>
+
+				<a href="#" class="modal__home_buy">Заказать</a>
+				<a href="#" class="modal__home_more">Узнать подробнее</a>
 			</div>
 			<!-- close .modal__home_body -->
 		</div>
@@ -66,19 +69,22 @@
 				<p>Светодиодное табло – это эффективный маркетинговый ход и надежное средство подачи информации. Изображение на светодиодном приборе будет различимо даже при расстоянии в 20 до 100 метров.</p>
 				
 				<div class="owl-carousel owl-theme owl_modal">
-					<a href="#" class="owl_modal__item">
+					<a href="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" data-lightbox="modal__home_tablo" class="owl_modal__item">
 						<img src="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" alt="" />
 					</a>
-					<a href="#" class="owl_modal__item">
+					<a href="<?php bloginfo('template_directory'); ?>/img/trade-center-night.jpg" data-lightbox="modal__home_tablo" class="owl_modal__item">
+						<img src="<?php bloginfo('template_directory'); ?>/img/trade-center-night.jpg" alt="" />
+					</a>
+					<a href="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" data-lightbox="modal__home_tablo" class="owl_modal__item">
 						<img src="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" alt="" />
 					</a>
-					<a href="#" class="owl_modal__item">
-						<img src="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" alt="" />
-					</a>
-					<a href="#" class="owl_modal__item">
+					<a href="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" data-lightbox="modal__home_tablo" class="owl_modal__item">
 						<img src="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" alt="" />
 					</a>
 				</div>
+
+				<a href="#" class="modal__home_buy">Заказать</a>
+				<a href="#" class="modal__home_more">Узнать подробнее</a>
 			</div>
 			<!-- close .modal__home_body -->
 		</div>

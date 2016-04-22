@@ -24,7 +24,7 @@ get_header(); // подключаем header.php ?>
 				</div>
 
 				<a href="#" class="show-info show-info_lightbox" data-modal="modal__home_lightbox">СВЕТОВОЙ КОРОБ</a>
-				<a href="#popup-default" class="show-info show-info_letters" data-modal="modal__home_tablo">ОБЬЕМНЫЕ БУКВЫ</a>
+				<a href="#" class="show-info show-info_letters" data-modal="modal__home_tablo">ОБЬЕМНЫЕ БУКВЫ</a>
 				<a href="#" class="show-info show-info_banner" data-modal="modal__home_tablo">баннер</a>
 				<a href="#" class="show-info show-info_stella" data-modal="modal__home_tablo">ПИЛОН/СТЕЛА</a>
 				<a href="#" class="show-info show-info_sign" data-modal="modal__home_tablo">ДОМОВОЙ ЗНАК</a>

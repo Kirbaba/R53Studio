@@ -24,18 +24,21 @@ jQuery(document).ready(function($) {
   });
 });
 
-$(".owl_modal").owlCarousel({    
-      navigation : false, 
-      items : 3,
-      slideSpeed : 1000,
-      paginationSpeed : 400,
-      touchDrag: true,
-      autoplayHoverPause: true,
-      items: [3],
-      navigation: true,
-      navigationText : false,
-      pagination : false
+jQuery(document).ready(function($) {
+      jQuery(".owl_modal").owlCarousel({    
+            navigation : false, 
+            items : 3,
+            slideSpeed : 1000,
+            paginationSpeed : 400,
+            touchDrag: true,
+            autoplayHoverPause: true,
+            items: [3],
+            navigation: true,
+            navigationText : false,
+            pagination : false
+      });
 });
+
 jQuery(document).ready(function($) {
 	$('.day-switch_night').on("click", function(event) {
 		 event.preventDefault();
@@ -60,6 +63,10 @@ jQuery(document).ready(function($) {
 		$(this).parent().parent().parent().hide();	
 		$('.show-info').show();	
 	});
-
-		
+	
+	(function () {
+         lightbox.option({
+            'albumLabel': ""
+         });
+    })(jQuery);
 });

@@ -22,6 +22,10 @@ jQuery(document).ready(function($) {
 		$(this).parent().parent().parent().hide();	
 		$('.show-info').show();	
 	});
-
-		
+	
+	(function () {
+         lightbox.option({
+            'albumLabel': ""
+         });
+    })(jQuery);
 });
