@@ -23,6 +23,28 @@
 		&_tablo {
 			@extend .modal__home_lightbox;
 		}
+		&_buy {
+			float: left;
+			margin-right: 25px;
+			padding: 7px 45px;
+			font-family: $scada;
+			font-size: 17px;
+			color: #FFF;
+			text-transform: uppercase;
+			background-color: #c3272f;
+			@include transition(.3s);
+			&:hover, &:focus {
+				background-color: darken(#C3272F, 10%);
+			}
+		}
+		&_more {
+			float: left;
+			font-family: $scada;
+			font-size: 15px;
+			color: #FFF;
+			text-decoration: underline;
+			margin: 7px 0;
+		}
 		&_body {
 			display: block;
 			position: absolute;

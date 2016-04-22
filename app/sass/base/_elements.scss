@@ -80,17 +80,24 @@
 	width: 107px;
 	height: 74px;
 	border: 1px solid #fff;
+	background-color: rgba(0,0,0,.7);
 	margin: 10px;
 	@include overflow-img;
 	img {
-		
+		max-width: 150%;
 	}
 }
 
 .modal__home_body {
+	.owl-carousel .owl-wrapper-outer {
+		margin: 0 -10px;
+	}
+	.owl-theme .owl-controls {
+		margin-top: 0;
+	}
 	.owl-theme .owl-controls .owl-buttons div {
 		position: absolute;
-		top: 45%;
+		top: 50%;
 		-webkit-transform: translateY(-50%);
 		   -moz-transform: translateY(-50%);
 		    -ms-transform: translateY(-50%);
@@ -100,15 +107,17 @@
 		height: 28px;
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
-		background-color: transparent!important;	
+		background-color: transparent!important;
+		margin: 0 !important;
+		padding: 0 !important;	
 	}
 	.owl-prev {		
-		background: url('../img/left.png') transparent;
-		left: -50px;
+		background: url('../img/left.png') no-repeat 50% 50%!important;
+		left: -40px;
 	}
 	.owl-next {
-		right: -50px;
-		background: url('../img/right.png') transparent;
+		right: -45px;
+		background: url('../img/right.png') no-repeat 50% 50%!important;
 	}
 	
 }

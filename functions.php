@@ -74,6 +74,7 @@ add_action('wp_footer', 'add_scripts'); // приклеем ф-ю на доба�
 function add_scripts() { // добавление скриптов
     if(is_admin()) return false; // если мы в админке - ничего не делаем
     wp_deregister_script('jquery'); // выключаем стандартный jquery
+     wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox-plus-jquery.min.js', array(), '1', 1);
     wp_enqueue_script('libs',get_template_directory_uri().'/js/libs.min.js','','',true); 
    
     wp_enqueue_script('custom-scripts', get_template_directory_uri().'/js/script.js','','',true); // бутстрап
@@ -88,7 +89,8 @@ function add_scripts() { // добавление скриптов
 add_action('wp_print_styles', 'add_styles'); // приклеем ф-ю на добавление стилей в хедер
 function add_styles() { // добавление стилей
     if(is_admin()) return false; // если мы в админке - ничего не делаем
-    wp_enqueue_style( 'libs', get_template_directory_uri().'/css/libs.min.css' );// бутстрап   
+    wp_enqueue_style( 'libs', get_template_directory_uri().'/css/libs.min.css' );// бутстрап 
+    wp_enqueue_style( 'lightbox', get_template_directory_uri() . '/css/lightbox.css', '1');  
     wp_enqueue_style( 'custom-styles', get_template_directory_uri().'/css/style.min.css' ); 
 	wp_enqueue_style( 'main', get_template_directory_uri().'/style.css' ); // основные стили шаблона
 }
