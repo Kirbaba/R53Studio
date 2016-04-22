@@ -53,10 +53,19 @@
 	.modal {
 		&__home {			
 			&_lightbox {
+			    background-position: 76% 125%;
+			     .modal__home_body {
+		    		top: 40vh;
+	    		}
+			}		
+			&_tablo {
 			    background-position: 54% 76%;
 			     .modal__home_body {
 		    		top: 40vh;
 	    		}
+			}
+			&_banner {
+				
 			}
 		}
 	}
