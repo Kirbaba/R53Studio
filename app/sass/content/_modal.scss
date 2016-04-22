@@ -9,12 +9,14 @@
 		-webkit-background-size: cover;
 		     -o-background-size: cover;
 		        background-size: cover;
-		background-repeat: no-repeat;
+		background-repeat: repeat;
 		&_lightbox {
 			display: none;
-		    background-size: 200%;
-		    background-repeat: no-repeat;
-		    background-position: 53% 52%;
+		    background-repeat: repeat;
+	        background-position: 80% 82%;
+			-webkit-background-size: 175%;
+			     -o-background-size: 175%;
+			        background-size: 175%;
 		    .modal__home_body {
 		    	top: 52vh;
 		    	margin-left: 275px;
@@ -22,6 +24,18 @@
 		}
 		&_tablo {
 			@extend .modal__home_lightbox;
+			background-position: 53% 52%;
+			-webkit-background-size: 200%;
+			     -o-background-size: 200%;
+			        background-size: 200%; 
+			  
+		}
+		&__banner {
+			@extend .modal__home_lightbox;
+	      	background-position: 53% 89%;
+	        -webkit-background-size: 350% 200%;
+	             -o-background-size: 350% 200%;
+	                background-size: 350% 200%;
 		}
 		&_buy {
 			float: left;
