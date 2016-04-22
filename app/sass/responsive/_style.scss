@@ -64,8 +64,93 @@
 		    		top: 40vh;
 	    		}
 			}
+			&_letters {
+				 -webkit-background-size: 350% 180%;
+         			  -o-background-size: 350% 180%;
+	                	 background-size: 350% 180%;
+				background-position: 55% 105%;
+			}
 			&_banner {
-				
+				-webkit-background-size: 200% 200%;
+         			  -o-background-size: 200% 200%;
+	                	 background-size: 200% 200%;
+				background-position: 38%  75%;
+			}
+			&_stella {
+				background-position: -36% 55%;
+		        -webkit-background-size: 80% 450%;
+			     -o-background-size: 80% 450%;
+			        background-size: 80% 450%;
+			    .modal__home_body {
+			    	top: 30vh;
+			    	margin-left: 575px;
+			    }
+			}
+			&_sign {
+		        background-position: 126% 70%;
+    			background-size: 120% 120%;
+			    .modal__home_body {
+			    	top: 30vh;
+			    	margin-left: 575px;
+			    }
+			}
+			&_flag {
+		    	background-position: 66% 60%;
+				.modal__home_body {
+			    	top: 20vh;
+			    	margin-left: 575px;
+			    }
+			}
+			&_stander {
+				background-position: 73% 45%;
+				.modal__home_body {
+			    	top: 20vh;
+			    	margin-left: 575px;
+			    }
+			}
+			&_transport {
+				background-position: 48% 34%;
+				background-size: 225% 186%;
+				.modal__home_body {
+			    	top: 20vh;
+			    }
+			}
+			&_plate {
+				background-position: 65% 86%;
+    			background-size: 225% 186%;
+				.modal__home_body {
+		    		top: 40vh;
+	    		}
+			}
+			&_inside-lightbox {
+				background-position: 52% 85%;
+    			background-size: 233% 229%;
+				.modal__home_body {
+			    	top: 40vh;
+			    }
+			}
+			&_signboard {
+				background-position: 50% 73%;
+    			background-size: 350% 234%;
+				.modal__home_body {
+			    	top: 40vh;
+			    }
+			}
+			&_inside-stand {	
+				background-position: 58% 55%;
+    			background-size: 200% 425%;
+				.modal__home_body {
+			    	top: 20vh;
+			    	margin-left: 575px;
+			    }
+			}
+			&_x-banner {
+				background-position: 96% 55%;
+    			background-size: 125% 425%;
+				.modal__home_body {
+			    	top: 20vh;
+			    	margin-left: 575px;
+			    }
 			}
 		}
 	}

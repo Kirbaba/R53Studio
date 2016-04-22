@@ -22,21 +22,106 @@
 		    	margin-left: 275px;
 		    }
 		}
-		&_tablo {
+
+		&_tablo, &_banner, &_letters, &_stella, &_sign, &_flag, &_stander, &_transport, &_plate, &_x-banner, &_inside-stand, &_signboard, &_inside-lightbox {
 			@extend .modal__home_lightbox;
+		}
+
+		&_tablo {
 			background-position: 53% 52%;
 			-webkit-background-size: 200%;
 			     -o-background-size: 200%;
 			        background-size: 200%; 
 			  
 		}
-		&__banner {
-			@extend .modal__home_lightbox;
-	      	background-position: 53% 89%;
+
+		&_letters {
+	      	background-position: 55% 89%;
 	        -webkit-background-size: 350% 200%;
 	             -o-background-size: 350% 200%;
 	                background-size: 350% 200%;
 		}
+		&_banner {
+			background-position: 34% 65%;
+	        -webkit-background-size: 200% 200%;
+	             -o-background-size: 200% 200%;
+	                background-size: 200% 200%;
+		}
+		&_stella {
+			background-position: -47% 52%;
+			-webkit-background-size: 80% 450%;
+			     -o-background-size: 80% 450%;
+			        background-size: 80% 450%;
+			.modal__home_body {
+		    	top: 30vh;
+		    	margin-left: 575px;
+		    }
+		}
+		&_sign {
+			background-position: 94% -40%;
+    		background-size: 140%;
+			.modal__home_body {
+		    	top: 24vh;
+		    	margin-left: 575px;
+		    }
+		}
+		&_flag {
+			background-position: 66% 20%;
+			.modal__home_body {
+		    	top: 24vh;
+		    	margin-left: 575px;
+		    }
+		}
+		&_stander {			
+			background-position: 74% 33%;
+    		background-size: 150% 254%;
+			.modal__home_body {
+		    	top: 24vh;
+		    	margin-left: 575px;
+		    }
+		}
+
+		&_transport {			
+			background-position: 49% 26%;
+    		background-size: 280%;
+			.modal__home_body {
+		    	top: 20vh;
+		    }
+		}
+
+		&_plate {
+			background-position: 63% 71%;
+    		background-size: 280%;
+		}
+
+		&_inside-lightbox {
+			background-position: 52% 70%;
+    		background-size: 280% 305%;
+		}
+
+		&_signboard {
+			background-position: 50% 63%;
+    		background-size: 415% 290%;
+		}
+
+		&_inside-stand {		
+			background-position: 57% 52%;
+    		background-size: 240% 450%;
+    		.modal__home_body {
+		    	top: 24vh;
+		    	margin-left: 575px;
+		    }
+		}
+
+		&_x-banner {
+			background-position: 82% 52%;
+    		background-size: 142% 450%;
+    		.modal__home_body {
+		    	top: 24vh;
+		    	margin-left: 575px;
+		    }
+		}
+
 		&_buy {
 			float: left;
 			margin-right: 25px;
