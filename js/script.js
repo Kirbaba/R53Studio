@@ -24,19 +24,17 @@ jQuery(document).ready(function($) {
   });
 });
 
-$(".owl_modal").owlCarousel({
-      autoPlay : 3000,
-      navigation : true, // Show next and prev buttons
-      slideSpeed : 300,
-      stopOnHover : true,
+$(".owl_modal").owlCarousel({    
+      navigation : false, 
+      items : 3,
+      slideSpeed : 1000,
       paginationSpeed : 400,
       touchDrag: true,
-      items : 3,
+      autoplayHoverPause: true,
+      items: [3],
+      navigation: true,
       navigationText : false,
-      pagination: false,
-      rewindNav: false,
-      goToFirstSpeed : 400,
-      transitionStyle:"fade"
+      pagination : false
 });
 jQuery(document).ready(function($) {
 	$('.day-switch_night').on("click", function(event) {
@@ -49,14 +47,12 @@ jQuery(document).ready(function($) {
 		$('.site-content').removeClass('bg_night');
 		$('.site-content').addClass('bg_day');		
 	});
-	
-	$('.show-info_lightbox').on("click", function(event) {
-		 event.preventDefault();
-		$('.modal__home_lightbox').show();	
-	});
+
 	$('.show-info').on("click", function(event) {
 		 event.preventDefault();
-		$('.show-info').hide();	
+		$('.show-info').hide();
+		var current = ($(this).data('modal'));
+		$("."+current).show();	
 	});
 
 	$('.modal__home_close').on("click", function(event) {
@@ -64,5 +60,6 @@ jQuery(document).ready(function($) {
 		$(this).parent().parent().parent().hide();	
 		$('.show-info').show();	
 	});
-	
+
+		
 });

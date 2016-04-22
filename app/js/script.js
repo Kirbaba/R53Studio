@@ -9,14 +9,12 @@ jQuery(document).ready(function($) {
 		$('.site-content').removeClass('bg_night');
 		$('.site-content').addClass('bg_day');		
 	});
-	
-	$('.show-info_lightbox').on("click", function(event) {
-		 event.preventDefault();
-		$('.modal__home_lightbox').show();	
-	});
+
 	$('.show-info').on("click", function(event) {
 		 event.preventDefault();
-		$('.show-info').hide();	
+		$('.show-info').hide();
+		var current = ($(this).data('modal'));
+		$("."+current).show();	
 	});
 
 	$('.modal__home_close').on("click", function(event) {
@@ -24,5 +22,6 @@ jQuery(document).ready(function($) {
 		$(this).parent().parent().parent().hide();	
 		$('.show-info').show();	
 	});
-	
+
+		
 });

@@ -86,3 +86,29 @@
 		
 	}
 }
+
+.modal__home_body {
+	.owl-theme .owl-controls .owl-buttons div {
+		position: absolute;
+		top: 45%;
+		-webkit-transform: translateY(-50%);
+		   -moz-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		     -o-transform: translateY(-50%);
+		        transform: translateY(-50%);	
+		width: 29px;
+		height: 28px;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-color: transparent!important;	
+	}
+	.owl-prev {		
+		background: url('../img/left.png') transparent;
+		left: -50px;
+	}
+	.owl-next {
+		right: -50px;
+		background: url('../img/right.png') transparent;
+	}
+	
+}
