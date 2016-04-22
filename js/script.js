@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
       event.preventDefault();
       if ($(this).parent().next().is('ul')) {
         $('.accordion h3').removeClass('active-title');
-        $(".accordion_title").addClass('js-accordion_title');
+        $(this).addClass('js-accordion_title');
         $(this).parent().addClass('active-title');
         $this = $(this);
         $target =  $this.parent().next();
@@ -21,12 +21,12 @@ jQuery(document).ready(function($) {
       }      
    
   });
- /* $('.js-accordion_title').click(function(event) {
+  $('.js-accordion_title').click(function(event) {
       event.preventDefault();
       $target =  $this.parent().next();
-      $(this).parent().next().removeClass('active-title');
+      $(this).parent().removeClass('active-title');
       $target.removeClass('active').slideUp();
-  });*/
+  });
 });
 
 jQuery(document).ready(function($) {
