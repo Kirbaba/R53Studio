@@ -369,15 +369,27 @@ ul {
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat; }
-  .modal__home_lightbox, .modal__home_tablo {
+  background-repeat: repeat; }
+  .modal__home_lightbox, .modal__home_tablo, .modal__home__banner {
     display: none;
-    background-size: 200%;
-    background-repeat: no-repeat;
-    background-position: 53% 52%; }
-    .modal__home_lightbox .modal__home_body, .modal__home_tablo .modal__home_body {
+    background-repeat: repeat;
+    background-position: 80% 82%;
+    -webkit-background-size: 175%;
+    -o-background-size: 175%;
+    background-size: 175%; }
+    .modal__home_lightbox .modal__home_body, .modal__home_tablo .modal__home_body, .modal__home__banner .modal__home_body {
       top: 52vh;
       margin-left: 275px; }
+  .modal__home_tablo {
+    background-position: 53% 52%;
+    -webkit-background-size: 200%;
+    -o-background-size: 200%;
+    background-size: 200%; }
+  .modal__home__banner {
+    background-position: 53% 89%;
+    -webkit-background-size: 350% 200%;
+    -o-background-size: 350% 200%;
+    background-size: 350% 200%; }
   .modal__home_buy {
     float: left;
     margin-right: 25px;
@@ -462,9 +474,13 @@ ul {
     .show-info_inside-lightbox {
       top: 12vh; }
 
-  .modal__home_lightbox, .modal__home_tablo {
+  .modal__home_lightbox, .modal__home_tablo, .modal__home__banner {
+    background-position: 76% 125%; }
+    .modal__home_lightbox .modal__home_body, .modal__home_tablo .modal__home_body, .modal__home__banner .modal__home_body {
+      top: 40vh; }
+  .modal__home_tablo {
     background-position: 54% 76%; }
-    .modal__home_lightbox .modal__home_body, .modal__home_tablo .modal__home_body {
+    .modal__home_tablo .modal__home_body {
       top: 40vh; } }
 
 /*# sourceMappingURL=style.css.map */
