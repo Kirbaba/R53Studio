@@ -51,17 +51,30 @@ jQuery(document).ready(function($) {
 		$('.site-content').addClass('bg_day');		
 	});
 
+	$('.go-inside').on("click", function(event) {
+		 event.preventDefault();
+		$('.site-content').addClass('bg_inside');
+		$('.js_outside').fadeOut();	
+		$('.js_inside').fadeIn();		
+	});
+	$('.go-outside').on("click", function(event) {
+		 event.preventDefault();
+		$('.site-content').removeClass('bg_inside');	
+		$('.js_inside').fadeOut();	
+		$('.js_outside').fadeIn();	
+	});
+
 	$('.show-info').on("click", function(event) {
 		 event.preventDefault();
-		$('.show-info').hide();
+		$('.show-info').fadeOut();
 		var current = ($(this).data('modal'));
-		$("."+current).show();	
+		$("."+current).fadeIn();	
 	});
 
 	$('.modal__home_close').on("click", function(event) {
 		 event.preventDefault();
-		$(this).parent().parent().parent().hide();	
-		$('.show-info').show();	
+		$(this).parent().parent().parent().fadeOut();	
+		$('.show-info').fadeIn();	
 	});
 	
 	(function () {
