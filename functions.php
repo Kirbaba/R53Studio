@@ -153,3 +153,152 @@ add_action('customize_register', function ($customizer) {
 });
 /*--------------------------------------------— КОНЕЦ НАСТРОЕК ТЕМЫ —-----------------------------------------------*/
 
+/*----------------------------------------------— НАЧАЛО РЕКЛАМА —---------------------------------------------------------*/
+
+add_action('init', 'myCustomInitAdvertising');
+
+function myCustomInitAdvertising()
+{
+	$labels = array(
+		'name' => 'Реклама', // Основное название типа записи
+		'singular_name' => 'Реклама', // отдельное название записи типа Book
+		'add_new' => 'Добавить рекламу',
+		'add_new_item' => 'Добавить новую рекламу',
+		'edit_item' => 'Редактировать рекламу',
+		'new_item' => 'Новая реклама',
+		'view_item' => 'Посмотреть рекламу',
+		'search_items' => 'Найти рекламу',
+		'not_found' => 'Рекламы не найдено',
+		'not_found_in_trash' => 'В корзине рекламы не найдено',
+		'parent_item_colon' => '',
+		'menu_name' => 'Реклама'
+
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'query_var' => true,
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'has_archive' => true,
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title', 'editor', 'thumbnail')
+	);
+	register_post_type('advertising', $args);
+}
+
+
+function advertisingShortcode()
+{
+	$args = array(
+		'post_type' => 'advertising',
+		'post_status' => 'publish',
+		'posts_per_page' => -1
+	);
+
+	$my_query = null;
+	$my_query = new WP_Query($args);
+
+	$parser = new Parser();
+	$parser->render(TM_DIR . '/views/advertising_modal.php', ['my_query' => $my_query]);
+
+}
+
+add_shortcode('advertising', 'advertisingShortcode');
+
+function photo_attachments( $attachments )
+{
+	$fields         = array(
+		array(
+			'name'      => 'title',                         // unique field name
+			'type'      => 'text',                          // registered field type
+			'label'     => __( 'Заголовок', 'attachments' ),    // label to display
+			'default'   => 'title',                         // default value upon selection
+		)
+	);
+
+	$args = array(
+
+		// title of the meta box (string)
+		'label'         => 'Прикрепленные изображения',
+
+		// all post types to utilize (string|array)
+		'post_type'     => array( 'advertising' ),
+
+		// meta box position (string) (normal, side or advanced)
+		'position'      => 'normal',
+
+		// meta box priority (string) (high, default, low, core)
+		'priority'      => 'high',
+
+		// allowed file type(s) (array) (image|video|text|audio|application)
+		'filetype'      => null,  // no filetype limit
+
+		// include a note within the meta box (string)
+		'note'          => 'прикрепите изображения здесь!',
+
+		// by default new Attachments will be appended to the list
+		// but you can have then prepend if you set this to false
+		'append'        => true,
+
+		// text for 'Attach' button in meta box (string)
+		'button_text'   => __( 'Добавить изображения', 'attachments' ),
+
+		// text for modal 'Attach' button (string)
+		'modal_text'    => __( 'Добавить', 'attachments' ),
+
+		// which tab should be the default in the modal (string) (browse|upload)
+		'router'        => 'browse',
+
+		// whether Attachments should set 'Uploaded to' (if not already set)
+		'post_parent'   => false,
+
+		// fields array
+		'fields'        => $fields,
+
+	);
+
+	$attachments->register( 'photo_attachments', $args ); // unique instance name
+}
+add_action( 'attachments_register', 'photo_attachments' );
+
+add_action('save_post', 'myExtraFieldsUpdate', 10, 1);
+
+/* Сохраняем данные, при сохранении поста */
+function myExtraFieldsUpdate($post_id)
+{
+	if (!isset($_POST['extra'])) return false;
+	foreach ($_POST['extra'] as $key => $value) {
+		if (empty($value)) {
+			delete_post_meta($post_id, $key); // удаляем поле если значение пустое
+			continue;
+		}
+
+		update_post_meta($post_id, $key, $value); // add_post_meta() работает автоматически
+	}
+	return $post_id;
+}
+
+function extraFieldsProductsSubtitle($post)
+{
+	?>
+	<p>
+		<span>Расположение: </span>
+		<input type="text" name='extra[size]' value="<?php echo get_post_meta($post->ID, "size", 1); ?>">
+	</p>
+	<?php
+}
+
+function myExtraFieldsProducts()
+{
+	add_meta_box('extra_size', 'Расположение', 'extraFieldsProductsSubtitle', 'advertising', 'normal', 'high');
+}
+
+add_action('add_meta_boxes', 'myExtraFieldsProducts', 1);
+
+/*---------------------------------------------— КОНЕЦ РЕКЛАМА —------------------------------------------------------*/
+
