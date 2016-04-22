@@ -52,7 +52,9 @@ ul {
   font-family: "Scada", sans-serif;
   text-transform: uppercase;
   font-size: 16px;
-  color: #FFF; }
+  color: #FFF;
+  /* Inside */
+  /* Inside */ }
   .show-info_lightbox {
     top: 18vh;
     left: 150px; }
@@ -80,6 +82,21 @@ ul {
   .show-info_transport {
     top: 68vh;
     left: 70%; }
+  .show-info_plate {
+    left: 21%;
+    top: 18vh; }
+  .show-info_x-banner {
+    left: 22%;
+    top: 42vh; }
+  .show-info_inside-stand {
+    left: 45%;
+    top: 45vh; }
+  .show-info_signboard {
+    left: 60%;
+    top: 32vh; }
+  .show-info_inside-lightbox {
+    left: 50%;
+    top: 14vh; }
 
 .day_group {
   position: absolute;
@@ -193,7 +210,8 @@ ul {
         text-shadow: 3px 4px 2px rgba(169, 31, 39, 0.75); }
   .header__contacts {
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: middle;
+    float: right; }
     .header__contacts h3 {
       font-size: 32px;
       padding-left: 30px;
@@ -230,11 +248,14 @@ ul {
 .bg_night {
   background-image: url("../img/trade-center-night.jpg"); }
 
+.bg_inside {
+  background-image: url("../img/trade-center-inside.jpg"); }
+
 .workspace {
   float: left;
   position: relative;
   width: calc(100% - 215px); }
-  .workspace a.go-inside {
+  .workspace a.go-btn {
     position: absolute;
     top: 0;
     left: 15px;
@@ -259,6 +280,9 @@ ul {
     background-image: -moz-linear-gradient(bottom, #abd7e3 0%, #f5f9fb 100%);
     background-image: -o-linear-gradient(bottom, #abd7e3 0%, #f5f9fb 100%);
     background-image: linear-gradient(bottom, #abd7e3 0%, #f5f9fb 100%); }
+
+.js_inside {
+  display: none; }
 
 .sidebar-left {
   float: left;
@@ -403,24 +427,40 @@ ul {
     -o-background-size: contain;
     background-size: contain; }
 
-  .show-info_stander {
-    left: 32%;
-    top: 58vh; }
-  .show-info_sign {
-    top: 40vh;
-    left: 18%; }
-  .show-info_stella {
-    top: 32vh;
-    left: 8%; }
-  .show-info_banner {
-    top: 25vh;
-    left: 87%; }
-  .show-info_tablo {
-    left: 55%;
-    top: 31vh; }
-  .show-info_transport {
-    top: 58vh;
-    left: 70%; }
+  .show-info {
+    /* Inside */
+    /* Inside */ }
+    .show-info_stander {
+      left: 32%;
+      top: 58vh; }
+    .show-info_sign {
+      top: 40vh;
+      left: 18%; }
+    .show-info_stella {
+      top: 32vh;
+      left: 8%; }
+    .show-info_banner {
+      top: 25vh;
+      left: 87%; }
+    .show-info_tablo {
+      left: 55%;
+      top: 31vh; }
+    .show-info_transport {
+      top: 58vh;
+      left: 70%; }
+    .show-info_plate {
+      left: 16%;
+      top: 15vh; }
+    .show-info_x-banner {
+      left: 20%;
+      top: 35vh; }
+    .show-info_inside-stand {
+      left: 52%; }
+    .show-info_signboard {
+      left: 65%;
+      top: 26vh; }
+    .show-info_inside-lightbox {
+      top: 12vh; }
 
   .modal__home_lightbox, .modal__home_tablo {
     background-position: 54% 76%; }

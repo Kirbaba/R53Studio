@@ -20,11 +20,15 @@
 	background-image: url('../img/trade-center-night.jpg');
 }
 
+.bg_inside {
+	background-image: url('../img/trade-center-inside.jpg');
+}
+
 .workspace {
 	float: left;
 	position: relative;
 	width: calc(100% - 215px);
-	a.go-inside {
+	a.go-btn {
 		position: absolute;
 		top: 0;
 		left: 15px;
@@ -40,5 +44,9 @@
 		@include box-shadow(inset 0 0 7px rgba(255,255,255,.4));
 		@include background-image(linear-gradient(bottom, #abd7e3 0%, #f5f9fb 100%));
 	}
+}
+
+.js_inside{
+	display: none;
 }
 
