@@ -28,14 +28,14 @@ get_header(); // подключаем header.php ?>
 					</div>
 
 					<a href="#" class="show-info show-info_lightbox" data-modal="modal__home_lightbox">СВЕТОВОЙ КОРОБ</a>
-					<a href="#" class="show-info show-info_letters" data-modal="modal__home_tablo">ОБЬЕМНЫЕ БУКВЫ</a>
-					<a href="#" class="show-info show-info_banner" data-modal="modal__home_tablo">баннер</a>
-					<a href="#" class="show-info show-info_stella" data-modal="modal__home_tablo">ПИЛОН/СТЕЛА</a>
-					<a href="#" class="show-info show-info_sign" data-modal="modal__home_tablo">ДОМОВОЙ ЗНАК</a>
-					<a href="#" class="show-info show-info_flag" data-modal="modal__home_tablo">ФЛАГ-ШТОК</a>
-					<a href="#" class="show-info show-info_stander" data-modal="modal__home_tablo">ШТЕНДЕР</a>
+					<a href="#" class="show-info show-info_letters" data-modal="modal__home_letters">ОБЬЕМНЫЕ БУКВЫ</a>
+					<a href="#" class="show-info show-info_banner" data-modal="modal__home_banner">баннер</a>
+					<a href="#" class="show-info show-info_stella" data-modal="modal__home_stella">ПИЛОН/СТЕЛА</a>
+					<a href="#" class="show-info show-info_sign" data-modal="modal__home_sign">ДОМОВОЙ ЗНАК</a>
+					<a href="#" class="show-info show-info_flag" data-modal="modal__home_flag">ФЛАГ-ШТОК</a>
+					<a href="#" class="show-info show-info_stander" data-modal="modal__home_stander">ШТЕНДЕР</a>
 					<a href="#" class="show-info show-info_tablo" data-modal="modal__home_tablo">СВЕТОДИОДНОЕ ТАБЛО</a>
-					<a href="#" class="show-info show-info_transport">ОКЛЕЙКА ТРАНСПОРТА</a>
+					<a href="#" class="show-info show-info_transport" data-modal="modal__home_transport">ОКЛЕЙКА ТРАНСПОРТА</a>
 				</div>
 				<!-- close .js_outside -->
 				<!-- open .js_inside -->
