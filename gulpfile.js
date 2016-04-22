@@ -82,7 +82,7 @@ gulp.task('compress', function() {
         .pipe(gulp.dest('css')); // Выгружаем в папку app/css
 });*/
 
-gulp.task('watch', ['browser-sync', 'scripts', 'compress'], function() {
+gulp.task('watch', ['browser-sync', 'compress'], function() {
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
     gulp.watch('./**/*.php', browserSync.reload); // Наблюдение за HTML файлами в корне проекта    
     gulp.watch('app/js/*', function() {
