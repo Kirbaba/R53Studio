@@ -12,7 +12,7 @@ require_once TM_DIR . '/lib/Parser.php';
 require_once TM_DIR . '/lib/bootstrap_menu.php';
 require_once TM_DIR . '/lib/clean_comments_constructor.php';
 
-function typical_title() { // функция вывода тайтла
+/*function typical_title() { // функция вывода тайтла
 	global $page, $paged; // переменные пагинации должны быть глобыльными
 	wp_title('', true, 'right'); // вывод стандартного заголовка без разделителя
 	$site_description = get_bloginfo('description', 'display'); // получаем описание сайта
@@ -20,11 +20,11 @@ function typical_title() { // функция вывода тайтла
 		echo " | $site_description"; // выводим описание сайта с "|" разделителем
 	if ($paged >= 2 || $page >= 2) // если пагинация была использована
 		echo ' | '.sprintf(__( 'Страница %s'), max($paged, $page)); // покажем номер страницы с "|" разделителем
-}
+}*/
 
 register_nav_menus(array( // Регистрируем 2 меню
 	'top' => 'Верхнее', // Верхнее
-	'bottom' => 'Внизу' // Внизу
+	'left' => 'Боковое' // Внизу
 ));
 
 add_theme_support('post-thumbnails'); // включаем поддержку миниатюр
@@ -106,4 +106,48 @@ function content_class_by_sidebar() { // функция для вывода кл
 		echo 'col-sm-12'; // контент на всю ширину
 	}
 }
+
+/*----------------------------------------------— НАСТРОЙКИ ТЕМЫ —--------------------------------------------------*/
+add_action('customize_register', function ($customizer) {
+	/*Меню настройки контактов*/
+	$customizer->add_section(
+		'phone_section',
+		array(
+			'title' => 'Настройки телефонов',
+			'description' => 'Контакты',
+			'priority' => 35,
+		)
+	);
+
+	$customizer->add_setting(
+		'phone_1_textbox',
+		array('default' => '29 6 255 755')
+	);
+
+	$customizer->add_control(
+		'phone_1_textbox',
+		array(
+			'label' => 'Телефон г. Минск',
+			'section' => 'phone_section',
+			'type' => 'text',
+		)
+	);
+
+	$customizer->add_setting(
+		'phone_2_textbox',
+		array('default' => '2235 77277')
+	);
+
+	$customizer->add_control(
+		'phone_2_textbox',
+		array(
+			'label' => 'Телефон г. Осиповичи',
+			'section' => 'phone_section',
+			'type' => 'text',
+		)
+	);
+
+
+});
+/*--------------------------------------------— КОНЕЦ НАСТРОЕК ТЕМЫ —-----------------------------------------------*/
 
