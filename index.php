@@ -42,11 +42,11 @@ get_header(); // подключаем header.php ?>
 				<div class="js_inside">
 					<a href="#" class="go-btn go-outside">ВНЕШНИЕ ИНТЕРЬЕРЫ</a>
 
-					<a href="#" class="show-info show-info_plate" data-modal="modal__home_lightbox">таблички</a>
-					<a href="#" class="show-info show-info_x-banner" data-modal="modal__home_tablo">х-баннер</a>
-					<a href="#" class="show-info show-info_inside-stand" data-modal="modal__home_tablo">информационный стенд </a>
-					<a href="#" class="show-info show-info_signboard" data-modal="modal__home_tablo">интерьерная вывеска</a>
-					<a href="#" class="show-info show-info_inside-lightbox" data-modal="modal__home_tablo">сверхтонкий световой короб</a>
+					<a href="#" class="show-info show-info_plate" data-modal="modal__home_plate">таблички</a>
+					<a href="#" class="show-info show-info_x-banner" data-modal="modal__home_x-banner">х-баннер</a>
+					<a href="#" class="show-info show-info_inside-stand" data-modal="modal__home_inside-stand">информационный стенд </a>
+					<a href="#" class="show-info show-info_signboard" data-modal="modal__home_signboard">интерьерная вывеска</a>
+					<a href="#" class="show-info show-info_inside-lightbox" data-modal="modal__home_inside-lightbox">сверхтонкий световой короб</a>
 				</div>
 				<!-- close .js_inside -->
 				
