@@ -1,0 +1,101 @@
+.page {
+	background-color: #FFF;
+}
+
+.page-contacts {
+	position: relative;
+	z-index: 2;
+	height: auto;
+	padding-top: 0;
+	&__wrap {
+		float: left;
+		width: 100%;
+		position: relative;
+		z-index: 4;
+		background-color: rgba(255,255,255,.7);
+		padding: 10px 0 50px;		
+	}
+}
+
+.ya_map {
+	float: left;
+	left: 0;
+	right: 0;
+	height: 150vh;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+	#map {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.workspace_page {
+	padding: 0 50px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+    h3 {
+		font-family: $scada;
+		margin: 10px 0;
+		color: #000;
+	}
+	p {
+		font-family: $scada;
+		margin: 10px 0;
+		color: #000;
+	}
+	&_input_submit {
+		float: left;
+		font-size: 14px;
+		color: #FFF;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 10px 15px;
+		@include border-radius(12px);
+		@include background-clip(padding-box);
+		background-color: #ef3f35;
+		text-decoration: none;
+		margin: 10px 0;
+		font-family: $scada;
+		@include transition(0.2s);
+		cursor: pointer;
+		outline: none;
+    	border: none;  
+		&:hover {
+			background-color: darken(#EF3F35, 10%);
+			text-decoration: none;
+			color: #fff;
+		}    	  	
+	}
+	&_input {
+		float: left;
+		position: relative;
+		padding: 10px 15px;
+		@include border-radius(11px);
+		margin: 10px 0;
+		width: 50%;
+		font-size: 14px;
+		font-weight: 700;
+    	color: #000;
+    	font-family: $scada;
+    	outline: none;
+    	border: 1px solid #7F7F7F;
+	}
+	&_text {
+		float: left;
+		position: relative;
+		padding: 10px 15px;
+		@include border-radius(11px);
+		margin: 15px 0;
+		width: 100%;
+		font-size: 14px;
+    	color: #000;
+    	font-family: $scada;
+    	outline: none;
+    	border: 1px solid #7F7F7F;
+    	height: 150px;
+    	resize: none;
+	}
+}

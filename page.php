@@ -5,19 +5,23 @@
  * @subpackage R53Studio
  */
 get_header(); // подключаем header.php ?>
-<section>
+<section class="site-content page">
+	<!-- open .container -->
 	<div class="container">
-		<div class="row">
-			<div class="<?php content_class_by_sidebar(); // функция подставит класс в зависимости от того есть ли сайдбар, лежит в functions.php ?>">
-				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); // старт цикла ?>
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> <?php // контэйнер с классами и id ?>
-						<h1><?php the_title(); // заголовок поста ?></h1>
-						<?php the_content(); // контент ?>
-					</article>
-				<?php endwhile; // конец цикла ?>
-			</div>
-			<?php get_sidebar(); // подключаем sidebar.php ?>
+		<?php get_sidebar(); ?>
+
+		<!-- open .workspace -->
+		<div class="workspace workspace_page">
+
+			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); // старт цикла ?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> <?php // контэйнер с классами и id ?>
+					<h3><?php the_title(); // заголовок поста ?></h3>
+					<?php the_content(); // контент ?>					
+					
+				</article>
+			<?php endwhile; // конец цикла ?>
 		</div>
+		<!-- close .workspace -->
 	</div>
 </section>
 <?php get_footer(); // подключаем footer.php ?>
