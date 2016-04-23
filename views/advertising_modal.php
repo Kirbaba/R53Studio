@@ -14,26 +14,20 @@
                     <a href="" class="modal__home_close"></a>
                     <h3><?php the_title() ?></h3>
                     <p><?php the_content() ?></p>
-
-                    <div class="owl-carousel owl-theme owl_modal">
-                        <a href="<?php bloginfo('template_directory'); ?>/img/tablo.jpg"
-                           data-lightbox="modal__home_lightbox" class="owl_modal__item">
-                            <img src="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" alt=""/>
-                        </a>
-                        <a href="<?php bloginfo('template_directory'); ?>/img/trade-center-day.jpg"
-                           data-lightbox="modal__home_lightbox" class="owl_modal__item">
-                            <img src="<?php bloginfo('template_directory'); ?>/img/trade-center-day.jpg" alt=""/>
-                        </a>
-                        <a href="<?php bloginfo('template_directory'); ?>/img/tablo.jpg"
-                           data-lightbox="modal__home_lightbox" class="owl_modal__item">
-                            <img src="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" alt=""/>
-                        </a>
-                        <a href="<?php bloginfo('template_directory'); ?>/img/tablo.jpg"
-                           data-lightbox="modal__home_lightbox" class="owl_modal__item">
-                            <img src="<?php bloginfo('template_directory'); ?>/img/tablo.jpg" alt=""/>
-                        </a>
-                    </div>
-
+                    <?php
+                    // retrieve all Attachments for the 'attachments' instance of post 123
+                    $attachments = new Attachments('photo_attachments');
+                    ?>
+                    <?php if ($attachments->exist()) : ?>
+                        <div class="owl-carousel owl-theme owl_modal">
+                            <?php while ($attachments->get()) : ?>
+                                <a href="<?= $attachments->url() ?>"
+                                   data-lightbox="modal__home_lightbox" class="owl_modal__item">
+                                   <img src="<?= $attachments->url() ?>" alt="<?= $attachments->field( 'title' ); ?>"/>
+                                </a>
+                            <?php endwhile; ?>
+                        </div>
+                    <?php endif ?>
                     <a href="#" class="modal__home_buy">Заказать</a>
                     <a href="#" class="modal__home_more">Узнать подробнее</a>
                 </div>
