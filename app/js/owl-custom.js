@@ -11,4 +11,17 @@ jQuery(document).ready(function($) {
             navigationText : false,
             pagination : false
       });
+
+      jQuery(".trust__carousel").owlCarousel({    
+            navigation : false, 
+            items : 6,
+            slideSpeed : 1000,
+            paginationSpeed : 400,
+            touchDrag: true,
+            autoplayHoverPause: true,
+            items: [6],
+            navigation: true,
+            navigationText : false,
+            pagination : false
+      });
 });
