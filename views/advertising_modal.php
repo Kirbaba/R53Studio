@@ -29,7 +29,7 @@
                         </div>
                     <?php endif ?>
                     <a href="#" class="modal__home_buy">Заказать</a>
-                    <a href="#" class="modal__home_more">Узнать подробнее</a>
+                    <a href="<?= get_permalink(); ?>" class="modal__home_more">Узнать подробнее</a>
                 </div>
                 <!-- close .modal__home_body -->
             </div>
