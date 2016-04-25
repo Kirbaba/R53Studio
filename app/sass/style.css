@@ -231,11 +231,10 @@ ul {
 .site-content {
   float: left;
   width: 100%;
-  min-height: 91vh;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: 110%;
+  -o-background-size: 110%;
+  background-size: 110%;
   background-position: 50% 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -254,7 +253,8 @@ ul {
 .workspace {
   float: left;
   position: relative;
-  width: calc(100% - 215px); }
+  width: calc(100% - 215px);
+  height: 90vh; }
   .workspace a.go-btn {
     position: absolute;
     top: 0;
@@ -283,6 +283,66 @@ ul {
 
 .js_inside {
   display: none; }
+
+.trust {
+  float: left;
+  position: relative;
+  width: 100%;
+  background-color: #FFF; }
+  .trust h2 {
+    text-align: center; }
+  .trust__carousel {
+    width: 90%;
+    margin: 0 auto;
+    position: relative; }
+    .trust__carousel_item_img {
+      float: left;
+      width: 100%;
+      height: 200px;
+      vertical-align: middle;
+      position: relative; }
+      .trust__carousel_item_img img {
+        max-width: 100%;
+        vertical-align: middle;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%); }
+    .trust__carousel_item h4 {
+      text-align: center;
+      font-family: "Scada", sans-serif;
+      font-weight: normal;
+      text-decoration: none; }
+    .trust__carousel .owl-prev, .trust__carousel .owl-next {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 29px;
+      height: 28px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-color: transparent !important;
+      margin: 0 !important;
+      padding: 0 !important; }
+    .trust__carousel .owl-prev {
+      position: absolute;
+      left: -5%;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url("../img/left-b.png") no-repeat 50% 50% !important; }
+    .trust__carousel .owl-next {
+      position: absolute;
+      right: -5%;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url("../img/right-b.png") no-repeat 50% 50% !important; }
 
 .sidebar-left {
   float: left;
@@ -373,7 +433,7 @@ ul {
   .modal__home_lightbox, .modal__home_tablo, .modal__home_banner, .modal__home_letters, .modal__home_stella, .modal__home_sign, .modal__home_flag, .modal__home_stander, .modal__home_transport, .modal__home_plate, .modal__home_x-banner, .modal__home_inside-stand, .modal__home_signboard, .modal__home_inside-lightbox {
     display: none;
     background-repeat: repeat;
-    background-position: 80% 82%;
+    background-position: 79% -215%;
     -webkit-background-size: 175%;
     -o-background-size: 175%;
     background-size: 175%; }
@@ -381,22 +441,22 @@ ul {
       top: 52vh;
       margin-left: 275px; }
   .modal__home_tablo {
-    background-position: 53% 52%;
+    background-position: 53% 723%;
     -webkit-background-size: 200%;
     -o-background-size: 200%;
     background-size: 200%; }
   .modal__home_letters {
-    background-position: 55% 89%;
+    background-position: 55% 95%;
     -webkit-background-size: 350% 200%;
     -o-background-size: 350% 200%;
     background-size: 350% 200%; }
   .modal__home_banner {
-    background-position: 34% 65%;
+    background-position: 34% 82%;
     -webkit-background-size: 200% 200%;
     -o-background-size: 200% 200%;
     background-size: 200% 200%; }
   .modal__home_stella {
-    background-position: -47% 52%;
+    background-position: -44% 58%;
     -webkit-background-size: 80% 450%;
     -o-background-size: 80% 450%;
     background-size: 80% 450%; }
@@ -404,45 +464,45 @@ ul {
       top: 30vh;
       margin-left: 575px; }
   .modal__home_sign {
-    background-position: 94% -40%;
+    background-position: 94% 3%;
     background-size: 140%; }
     .modal__home_sign .modal__home_body {
       top: 24vh;
       margin-left: 575px; }
   .modal__home_flag {
-    background-position: 66% 20%; }
+    background-position: 66% -65%; }
     .modal__home_flag .modal__home_body {
       top: 24vh;
       margin-left: 575px; }
   .modal__home_stander {
-    background-position: 74% 33%;
-    background-size: 150% 254%; }
+    background-position: 74% 55%;
+    background-size: 150% 160%; }
     .modal__home_stander .modal__home_body {
       top: 24vh;
       margin-left: 575px; }
   .modal__home_transport {
-    background-position: 49% 26%;
+    background-position: 49% 48%;
     background-size: 280%; }
     .modal__home_transport .modal__home_body {
       top: 20vh; }
   .modal__home_plate {
-    background-position: 63% 71%;
+    background-position: 63% 126%;
     background-size: 280%; }
   .modal__home_inside-lightbox {
-    background-position: 52% 70%;
-    background-size: 280% 305%; }
+    background-position: 52% 88%;
+    background-size: 280% 220%; }
   .modal__home_signboard {
-    background-position: 50% 63%;
-    background-size: 415% 290%; }
+    background-position: 50% 84%;
+    background-size: 415% 200%; }
   .modal__home_inside-stand {
-    background-position: 57% 52%;
+    background-position: 57% 58%;
     background-size: 240% 450%; }
     .modal__home_inside-stand .modal__home_body {
       top: 24vh;
       margin-left: 575px; }
   .modal__home_x-banner {
-    background-position: 82% 52%;
-    background-size: 142% 450%; }
+    background-position: 81% 59%;
+    background-size: 142% 370%; }
     .modal__home_x-banner .modal__home_body {
       top: 24vh;
       margin-left: 575px; }
@@ -599,6 +659,9 @@ ul {
     -o-background-size: contain;
     background-size: contain; }
 
+  .workspace {
+    height: 730px; }
+
   .show-info {
     /* Inside */
     /* Inside */ }
@@ -635,11 +698,11 @@ ul {
       top: 12vh; }
 
   .modal__home_lightbox, .modal__home_tablo, .modal__home_banner, .modal__home_letters, .modal__home_stella, .modal__home_sign, .modal__home_flag, .modal__home_stander, .modal__home_transport, .modal__home_plate, .modal__home_x-banner, .modal__home_inside-stand, .modal__home_signboard, .modal__home_inside-lightbox {
-    background-position: 76% 125%; }
+    background-position: 76% 255%; }
     .modal__home_lightbox .modal__home_body, .modal__home_tablo .modal__home_body, .modal__home_banner .modal__home_body, .modal__home_letters .modal__home_body, .modal__home_stella .modal__home_body, .modal__home_sign .modal__home_body, .modal__home_flag .modal__home_body, .modal__home_stander .modal__home_body, .modal__home_transport .modal__home_body, .modal__home_plate .modal__home_body, .modal__home_x-banner .modal__home_body, .modal__home_inside-stand .modal__home_body, .modal__home_signboard .modal__home_body, .modal__home_inside-lightbox .modal__home_body {
       top: 40vh; }
   .modal__home_tablo {
-    background-position: 54% 76%; }
+    background-position: 54% 112%; }
     .modal__home_tablo .modal__home_body {
       top: 40vh; }
   .modal__home_letters {
@@ -648,12 +711,12 @@ ul {
     background-size: 350% 180%;
     background-position: 55% 105%; }
   .modal__home_banner {
-    -webkit-background-size: 200% 200%;
-    -o-background-size: 200% 200%;
-    background-size: 200% 200%;
+    -webkit-background-size: 200% 215%;
+    -o-background-size: 200% 215%;
+    background-size: 200% 215%;
     background-position: 38%  75%; }
   .modal__home_stella {
-    background-position: -36% 55%;
+    background-position: -36% 57%;
     -webkit-background-size: 80% 450%;
     -o-background-size: 80% 450%;
     background-size: 80% 450%; }
@@ -661,13 +724,13 @@ ul {
       top: 30vh;
       margin-left: 575px; }
   .modal__home_sign {
-    background-position: 126% 70%;
-    background-size: 120% 120%; }
+    background-position: 124% 77%;
+    background-size: 120% 147%; }
     .modal__home_sign .modal__home_body {
       top: 30vh;
       margin-left: 575px; }
   .modal__home_flag {
-    background-position: 66% 60%; }
+    background-position: 66% 125%; }
     .modal__home_flag .modal__home_body {
       top: 20vh;
       margin-left: 575px; }
@@ -677,17 +740,17 @@ ul {
       top: 20vh;
       margin-left: 575px; }
   .modal__home_transport {
-    background-position: 48% 34%;
+    background-position: 49% 46%;
     background-size: 225% 186%; }
     .modal__home_transport .modal__home_body {
       top: 20vh; }
   .modal__home_plate {
-    background-position: 65% 86%;
+    background-position: 65% 91%;
     background-size: 225% 186%; }
     .modal__home_plate .modal__home_body {
       top: 40vh; }
   .modal__home_inside-lightbox {
-    background-position: 52% 85%;
+    background-position: 52% 87%;
     background-size: 233% 229%; }
     .modal__home_inside-lightbox .modal__home_body {
       top: 40vh; }
@@ -697,14 +760,14 @@ ul {
     .modal__home_signboard .modal__home_body {
       top: 40vh; }
   .modal__home_inside-stand {
-    background-position: 58% 55%;
+    background-position: 58% 58%;
     background-size: 200% 425%; }
     .modal__home_inside-stand .modal__home_body {
       top: 20vh;
       margin-left: 575px; }
   .modal__home_x-banner {
-    background-position: 96% 55%;
-    background-size: 125% 425%; }
+    background-position: 122% 58%;
+    background-size: 116% 370%; }
     .modal__home_x-banner .modal__home_body {
       top: 20vh;
       margin-left: 575px; }
