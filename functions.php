@@ -327,3 +327,20 @@ function add_order(){
 /*---------------------------------------------— КОНЕЦ ОТПРАВКА ЗАКАЗА —------------------------------------------------------*/
 
 
+/*---------------------------------------------— ОТПРАВКА ФОРМЫ —------------------------------------------------------*/
+add_action('admin_post_send_form', 'send_form');
+add_action('admin_post_nopriv_send_form', 'send_form');
+
+function send_form()
+{
+	$parser = new Parser();
+	$text = $parser->render(TM_DIR . '/views/mail_send.php', ['post' => $_POST], false);
+	$headers[] = "Content-type: text/html;";
+	wp_mail(get_option('admin_email'), "Письмо с вашего сайта", $text, $headers);
+	header("HTTP/1.1 301 Moved Permanently");
+	header("Location: " . get_bloginfo('url'));
+	exit();
+}
+/*---------------------------------------------— КОНЕЦ ОТПРАВКА ФОРМЫ —------------------------------------------------------*/
+
+

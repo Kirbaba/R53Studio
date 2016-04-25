@@ -6,7 +6,7 @@
  */
 get_header(); // подключаем header.php ?>
 
-    <section class="site-content page-contacts">
+    <section class="site-content page">
         <!-- open .page-contacts__wrap -->
         <div class="page-contacts__wrap">
             <!-- open .container -->

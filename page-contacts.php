@@ -20,9 +20,10 @@ get_header(); // подключаем header.php ?>
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> <?php // контэйнер с классами и id ?>
 							<h3><?php the_title(); // заголовок поста ?></h3>
 							<?php the_content(); // контент ?>
-							<form action="#">
+							<form action="<?= get_bloginfo('url'); ?>/wp-admin/admin-post.php?action=add_order" method="POST" enctype="multipart/form-data">
 								<input type="text" name="contacts_name" class="workspace_page_input" placeholder="Имя" />
 								<input type="email" name="contacts_email" class="workspace_page_input" placeholder="E-mail"/>
+								<input type="hidden" name="action" value="send_form">
 								<textarea name="contacts_comment" class="workspace_page_text" placeholder="Комментарий"></textarea>
 								<button type="submit" class="workspace_page_input_submit">Отправить</button>
 							</form>
