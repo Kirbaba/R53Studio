@@ -75,6 +75,7 @@ function add_scripts() { // добавление скриптов
     if(is_admin()) return false; // если мы в админке - ничего не делаем
     wp_deregister_script('jquery'); // выключаем стандартный jquery
      wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox-plus-jquery.min.js', array(), '1', 1);
+    wp_enqueue_script( 'yndex-map', 'http://api-maps.yandex.ru/2.1/?lang=ru_RU', array(), '1');
     wp_enqueue_script('libs',get_template_directory_uri().'/js/libs.min.js','','',true); 
    
     wp_enqueue_script('custom-scripts', get_template_directory_uri().'/js/script.js','','',true); // бутстрап
@@ -301,4 +302,28 @@ function myExtraFieldsProducts()
 add_action('add_meta_boxes', 'myExtraFieldsProducts', 1);
 
 /*---------------------------------------------— КОНЕЦ РЕКЛАМА —------------------------------------------------------*/
+
+
+/*---------------------------------------------— ОТПРАВКА ЗАКАЗА —------------------------------------------------------*/
+add_action('admin_post_add_order', 'add_order');
+add_action('admin_post_nopriv_add_order', 'add_order');
+
+function add_order(){
+	$parser = new Parser();
+	$text = $parser->render(TM_DIR . '/views/mail_order.php', ['post' => $_POST], false);
+	$headers[] = "Content-type: text/html;";
+	if(empty($_FILES['file']['name'])){
+		wp_mail(get_option('admin_email'), "Заявка с вашего сайта", $text, $headers);
+	}
+	else {
+		$uploaddir = TM_DIR . '/files/' . $_FILES['file']['name'];
+		copy($_FILES['file']['tmp_name'], $uploaddir);
+		wp_mail(get_option('admin_email'), "Заявка с вашего сайта", $text, $headers, $uploaddir);
+	}
+	header("HTTP/1.1 301 Moved Permanently");
+	header("Location: ".get_bloginfo('url'));
+	exit();
+}
+/*---------------------------------------------— КОНЕЦ ОТПРАВКА ЗАКАЗА —------------------------------------------------------*/
+
 

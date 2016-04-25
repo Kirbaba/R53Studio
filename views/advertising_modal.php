@@ -13,7 +13,7 @@
                 <div class="modal__home_body">
                     <a href="" class="modal__home_close"></a>
                     <h3><?php the_title() ?></h3>
-                    <p><?php the_content() ?></p>
+                    <p><?php the_excerpt() ?></p>
                     <?php
                     // retrieve all Attachments for the 'attachments' instance of post 123
                     $attachments = new Attachments('photo_attachments');
@@ -28,7 +28,7 @@
                             <?php endwhile; ?>
                         </div>
                     <?php endif ?>
-                    <a href="#" class="modal__home_buy">Заказать</a>
+                    <a href="/order/" class="modal__home_buy">Заказать</a>
                     <a href="<?= get_permalink(); ?>" class="modal__home_more">Узнать подробнее</a>
                 </div>
                 <!-- close .modal__home_body -->
