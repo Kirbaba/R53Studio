@@ -123,3 +123,154 @@
 			
 	}
 }
+
+.stock {
+	float: left;
+	width: 100%;
+	padding: 80px 0;
+	background-image: url('../img/bg-(1).png');
+	background-repeat: no-repeat;
+	background-color: #FFF;
+	-webkit-background-size: 100%;
+	     -o-background-size: 100%;
+	        background-size: 100%;
+	background-position: 50% 0%;
+	&__baner {
+		float: left;
+		position: relative;
+		width: 50%;
+		margin-left: 25%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 100px 25px 50px;
+		text-align: center;
+		h3 {
+			text-transform: uppercase;
+			font-size: 21px;
+		}
+		img {
+			display: block;
+			margin: 0 auto 15px;
+			width: 75%;
+		}
+	}
+	&__form {
+		float: left;
+		position: relative;
+		width: 25%;
+		background-color: #C32730;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 40px 25px;
+		color: #FFF;
+		text-align: center;
+		h4 {
+			margin: 0;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+		p {
+			font-size: 13px;
+			text-transform: uppercase;
+		}
+		&_input, &_text, &_submit, &_file {
+			width: 100%;
+		}
+		&_input, &_text {
+			float: left;
+			border: 1px solid #dedecf;
+			@include border-radius(7px);
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			padding: 10px 15px;
+			margin-bottom: 10px;
+			@include background-clip(padding-box);
+			background-color: #fff;
+			@include box-shadow(0 1px 0 rgba(255,255,255,.91), inset 1px 2px 5px rgba(0,0,0,.07));
+			outline: none;
+		}
+		&_text {
+			resize: none;
+			margin-bottom: 10px;
+		}
+		&_file {
+			margin-bottom: 10px;
+		}
+
+		input[type="file"] {
+		    height: 36px;
+		    width: 100%;
+		    opacity: 0;
+		    z-index: 0;
+		    cursor: pointer;
+		}
+
+		label {
+			float: left;
+			width: 100%;
+			margin-top: -46px;
+			cursor: pointer;
+			span{
+				width: 100%;
+				float: left;
+				color: #C32730;
+				text-align: center;
+				font-size: 12px;
+				border: 1px solid #dedecf;
+				@include border-radius(7px);
+				-webkit-box-sizing: border-box;
+				   -moz-box-sizing: border-box;
+				        box-sizing: border-box;
+				padding: 10px 15px;
+				margin-bottom: 10px;
+				@include background-clip(padding-box);
+				background-color: #fff;
+				@include box-shadow(0 1px 0 rgba(255,255,255,.91), inset 1px 2px 5px rgba(0,0,0,.07));
+				outline: none;
+				cursor: pointer;
+				z-index: 9;
+				position: relative;
+			}
+		}
+			
+
+		&_submit {
+			position: relative;
+			color: #362A2A;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: bold;
+			padding: 10px;
+			background-color: #FFF;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			@include transition(.3s);
+			span {
+				position: absolute;
+				bottom: -5px;
+				left: 0;
+				right: 0;
+				border-top: 5px solid #b00000;
+				border-left: 7px solid transparent;
+				border-right: 7px solid transparent;
+				@include transition(.3s);
+			}
+			&:hover, &:focus {
+				color: #FFF;
+				background-color: #B00000;
+				span {
+					border-top: 5px solid #fff;
+				}
+			}
+
+		}
+	}
+}
+
+
+
+

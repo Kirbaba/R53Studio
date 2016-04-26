@@ -63,12 +63,12 @@ jQuery(document).ready(function($) {
 
       jQuery(".trust__carousel").owlCarousel({    
             navigation : false, 
-            items : 6,
+            items : 4,
             slideSpeed : 1000,
             paginationSpeed : 400,
             touchDrag: true,
             autoplayHoverPause: true,
-            items: [6],
+            items: [4],
             navigation: true,
             navigationText : false,
             pagination : false
@@ -104,6 +104,12 @@ function init() {
         .add(myGeoObject);
 }
 jQuery(document).ready(function($) {
+	$('.js_input_file').on("click", function(event) {
+		event.preventDefault();	
+		 $("#stock__form_file").trigger('click');	
+
+	});
+
 	$('.day-switch_night').on("click", function(event) {
 		 event.preventDefault();
 		$('.site-content').removeClass('bg_day');
@@ -146,4 +152,15 @@ jQuery(document).ready(function($) {
             'albumLabel': ""
          });
     })(jQuery);
+
+    var clock;
+    clock = $('.clock').FlipClock({
+        clockFace: 'DailyCounter',
+        autoStart: false,   
+        lang: 'ru'  
+    });    
+
+    clock.setTime(440880);
+    clock.setCountdown(true);
+    clock.start();
 });
