@@ -14,12 +14,12 @@ jQuery(document).ready(function($) {
 
       jQuery(".trust__carousel").owlCarousel({    
             navigation : false, 
-            items : 6,
+            items : 4,
             slideSpeed : 1000,
             paginationSpeed : 400,
             touchDrag: true,
             autoplayHoverPause: true,
-            items: [6],
+            items: [4],
             navigation: true,
             navigationText : false,
             pagination : false

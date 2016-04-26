@@ -58,4 +58,40 @@ get_header(); // подключаем header.php ?>
 	</section>
 	<!-- close .site-content -->
 
+	<!-- open .stock -->
+	<section class="stock">
+		<!-- open .container -->
+		<div class="container">
+			<!-- open .stock__baner -->
+			<div class="stock__baner">
+				<img src="<?php bloginfo('template_directory'); ?>/img/152-6302-offer-ribbon.png" alt="" />
+				<h3>Успей заказать наружную рекламу<br /> до 1 июля 2016 <br />	 и получи <span class="color_red">дизайн в подарок</span></h3>
+				<div class="clockContainer">
+				<h2>До конца акции осталось:</h2>
+				<div class="clock"></div>
+			</div>
+			</div>
+			<!-- close .stock__baner -->
+			<!-- open .stock__form -->
+			<div class="stock__form">
+				<h4>Быстрый расчет стоимости заказа</h4>
+				<p>Оставьте заявку на бесплатную консультацию</p>
+				<form action="<?= get_bloginfo('url'); ?>/wp-admin/admin-post.php?action=add_order" method="POST" enctype="multipart/form-data">
+					<input type="text" name="contacts_name" class="stock__form_input" placeholder="Ваше имя"/>
+					<input type="email" name="contacts_email" class="stock__form_input"  placeholder="E-mail"/>
+					<input type="tel" name="contacts_phone" class="stock__form_input"  placeholder="Номер телефона"/>
+					<textarea name="contacts_comment" class="stock__form_text" placeholder="Сообщение"></textarea>
+					<input type="hidden" name="action" value="add_order">
+					<input type="file" id="stock__form_file" name="file" class="stock__form_file"  placeholder="прикрепить файл"/>
+					<label for="stock__form_file"><span class="js_input_file">прикрепить файл</span></label>
+					<button type="submit" class="stock__form_submit">заказать со скидкой! <span></span></button>
+				</form>
+
+			</div>
+			<!-- close .stock__form -->
+		</div>
+		<!-- close .container -->
+	</section>
+	<!-- close .stock -->
+
 <?php get_footer(); // подключаем footer.php ?>

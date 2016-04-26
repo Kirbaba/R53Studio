@@ -77,7 +77,7 @@ function add_scripts() { // добавление скриптов
      wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox-plus-jquery.min.js', array(), '1', 1);
     wp_enqueue_script( 'yndex-map', 'http://api-maps.yandex.ru/2.1/?lang=ru_RU', array(), '1');
     wp_enqueue_script('libs',get_template_directory_uri().'/js/libs.min.js','','',true); 
-   
+    wp_enqueue_script( 'flipclock_js', get_template_directory_uri() . '/js/flipclock.js', array(), '1', true);
     wp_enqueue_script('custom-scripts', get_template_directory_uri().'/js/script.js','','',true); // бутстрап
     wp_enqueue_script('main', get_template_directory_uri().'/js/main.js','','',true); // и скрипты шаблона
 	wp_localize_script('main', 'myajax',
@@ -92,6 +92,7 @@ function add_styles() { // добавление стилей
     if(is_admin()) return false; // если мы в админке - ничего не делаем
     wp_enqueue_style( 'libs', get_template_directory_uri().'/css/libs.min.css' );// бутстрап 
     wp_enqueue_style( 'lightbox', get_template_directory_uri() . '/css/lightbox.css', '1');  
+    wp_enqueue_style( 'flipclock', get_template_directory_uri() . '/css/flipclock.css');
     wp_enqueue_style( 'custom-styles', get_template_directory_uri().'/css/style.min.css' ); 
 	wp_enqueue_style( 'main', get_template_directory_uri().'/style.css' ); // основные стили шаблона
 }
