@@ -19,7 +19,7 @@
                             <?= get_the_post_thumbnail(); ?>
                         </div>
                         <!-- close .trust__carousel_item_img -->
-                        <h4><?php the_title() ?></h4>
+                        <!--<h4><?php /*the_title() */?></h4>-->
                     </div>
                     <!-- close .trust__carousel_item -->
                 <?php endwhile;
