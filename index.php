@@ -158,15 +158,17 @@ get_header(); // подключаем header.php ?>
 			<div class="stock__form">
 				<h4>Быстрый расчет стоимости заказа</h4>
 				<p>Оставьте заявку на бесплатную консультацию</p>
-				<input type="text" name="stock__form_name" class="stock__form_input" placeholder="Ваше имя"/>
-				<input type="email" name="stock__form_email" class="stock__form_input"  placeholder="E-mail"/>
-				<input type="tel" name="stock__form_tel" class="stock__form_input"  placeholder="Номер телефона"/>
-				<textarea name="stock__form_text" class="stock__form_text" placeholder="Сообщение"></textarea>
-				
-				<input type="file" id="stock__form_file" name="stock__form_file" class="stock__form_file"  placeholder="прикрепить файл"/>
-				<label for="stock__form_file"><span class="js_input_file">прикрепить файл</span></label>
+				<form action="<?= get_bloginfo('url'); ?>/wp-admin/admin-post.php?action=add_order" method="POST" enctype="multipart/form-data">
+					<input type="text" name="contacts_name" class="stock__form_input" placeholder="Ваше имя"/>
+					<input type="email" name="contacts_email" class="stock__form_input"  placeholder="E-mail"/>
+					<input type="tel" name="contacts_phone" class="stock__form_input"  placeholder="Номер телефона"/>
+					<textarea name="contacts_comment" class="stock__form_text" placeholder="Сообщение"></textarea>
+					<input type="hidden" name="action" value="add_order">
+					<input type="file" id="stock__form_file" name="file" class="stock__form_file"  placeholder="прикрепить файл"/>
+					<label for="stock__form_file"><span class="js_input_file">прикрепить файл</span></label>
+					<button type="submit" class="stock__form_submit">заказать со скидкой! <span></span></button>
+				</form>
 
-				<button type="submit" class="stock__form_submit">заказать со скидкой! <span></span></button>
 			</div>
 			<!-- close .stock__form -->
 		</div>
