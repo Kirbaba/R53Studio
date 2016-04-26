@@ -413,15 +413,16 @@ ul {
       vertical-align: middle;
       position: relative; }
       .trust__carousel_item_img img {
-        max-width: 100%;
+        max-width: 90%;
         vertical-align: middle;
         position: relative;
+        left: 50%;
         top: 50%;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%); }
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
     .trust__carousel_item h4 {
       text-align: center;
       font-family: "Scada", sans-serif;
@@ -492,6 +493,7 @@ ul {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 40px 25px;
+    margin-top: 55px;
     color: #FFF;
     text-align: center; }
     .stock__form h4 {
@@ -598,6 +600,11 @@ ul {
         background-color: #B00000; }
         .stock__form_submit:hover span, .stock__form_submit:focus span {
           border-top: 5px solid #fff; }
+
+.clockContainer h2 {
+  font-size: 18px;
+  font-weight: normal;
+  text-transform: uppercase; }
 
 .sidebar-left {
   float: left;
@@ -907,6 +914,41 @@ ul {
     border: 1px solid #7F7F7F;
     height: 150px;
     resize: none; }
+
+.footer {
+  float: left;
+  width: 100%;
+  padding: 50px 0; }
+  .footer__nav {
+    float: left;
+    width: 33.33333%;
+    margin-right: 33.33333%; }
+    .footer__nav_menu {
+      padding: 0;
+      width: 100%; }
+      .footer__nav_menu li {
+        display: inline-block;
+        margin-right: 20px; }
+        .footer__nav_menu li a {
+          color: #FFF;
+          font-size: 16px;
+          font-weight: normal;
+          text-shadow: 3px 4px 2px rgba(169, 31, 39, 0.75); }
+  .footer__copyright {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    color: #FFF;
+    margin: 10px 0; }
+  .footer__contacts {
+    float: left;
+    width: 33.33333%;
+    text-align: right;
+    color: #FFF; }
+    .footer__contacts h4 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 0; }
 
 @media (min-width: 1400px) {
   .site-content {
