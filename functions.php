@@ -345,3 +345,61 @@ function send_form()
 /*---------------------------------------------— КОНЕЦ ОТПРАВКА ФОРМЫ —------------------------------------------------------*/
 
 
+/*---------------------------------------------— НАМ ДОВЕРЯЮТ —------------------------------------------------------*/
+add_action('init', 'myCustomInitPartners');
+
+function myCustomInitPartners()
+{
+	$labels = array(
+		'name' => 'Партнеры', // Основное название типа записи
+		'singular_name' => 'Партнеры', // отдельное название записи типа Book
+		'add_new' => 'Добавить Партнера',
+		'add_new_item' => 'Добавить нового Партнера',
+		'edit_item' => 'Редактировать Партнера',
+		'new_item' => 'Новый Партнер',
+		'view_item' => 'Посмотреть Партнера',
+		'search_items' => 'Найти Партнера',
+		'not_found' => 'Партнеров не найдено',
+		'not_found_in_trash' => 'В корзине Партнеров не найдено',
+		'parent_item_colon' => '',
+		'menu_name' => 'Партнеры'
+
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'query_var' => true,
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'has_archive' => true,
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title', 'thumbnail')
+	);
+	register_post_type('partners', $args);
+}
+
+
+function partnersShortcode()
+{
+	$args = array(
+		'post_type' => 'partners',
+		'post_status' => 'publish',
+		'posts_per_page' => -1
+	);
+
+	$my_query = null;
+	$my_query = new WP_Query($args);
+
+	$parser = new Parser();
+	$parser->render(TM_DIR . '/views/partners.php', ['my_query' => $my_query]);
+
+}
+
+add_shortcode('partners', 'partnersShortcode');
+/*---------------------------------------------— КОНЕЦ НАМ ДОВЕРЯЮТ —------------------------------------------------------*/
+
+
