@@ -56,13 +56,13 @@
 	.modal {
 		&__home {			
 			&_lightbox {
-			    background-position: 76% 255%;
+			    background-position: 76% 123%;
 			     .modal__home_body {
 		    		top: 40vh;
 	    		}
 			}		
 			&_tablo {
-			    background-position: 54% 112%;
+			    background-position: 54% 75%;
 			     .modal__home_body {
 		    		top: 40vh;
 	    		}
@@ -74,13 +74,13 @@
 				background-position: 55% 105%;
 			}
 			&_banner {
-				-webkit-background-size: 200% 215%;
+				-webkit-background-size: 200% 190%;
          			  -o-background-size: 200% 215%;
 	                	 background-size: 200% 215%;
 				background-position: 38%  75%;
 			}
 			&_stella {
-				background-position: -36% 57%;
+				background-position: -36% 55%;
 		        -webkit-background-size: 80% 450%;
 			     -o-background-size: 80% 450%;
 			        background-size: 80% 450%;
@@ -90,7 +90,7 @@
 			    }
 			}
 			&_sign {
-	            background-position: 124% 77%;
+	            background-position: 124% 62%;
     			background-size: 120% 147%;
 			    .modal__home_body {
 			    	top: 30vh;
@@ -98,35 +98,35 @@
 			    }
 			}
 			&_flag {
-		    	background-position: 66% 125%;
+		    	background-position: 66% 55%;
 				.modal__home_body {
 			    	top: 20vh;
 			    	margin-left: 575px;
 			    }
 			}
 			&_stander {
-				background-position: 73% 45%;
+				background-position: 73% 29%;
 				.modal__home_body {
 			    	top: 20vh;
 			    	margin-left: 575px;
 			    }
 			}
 			&_transport {
-				background-position: 49% 46%;
+				background-position: 48% 32%;
 				background-size: 225% 186%;
 				.modal__home_body {
 			    	top: 20vh;
 			    }
 			}
 			&_plate {
-				background-position: 65% 91%;
+				background-position: 65% 85%;
     			background-size: 225% 186%;
 				.modal__home_body {
 		    		top: 40vh;
 	    		}
 			}
 			&_inside-lightbox {
-				background-position: 52% 87%;
+				background-position: 52% 84%;
     			background-size: 233% 229%;
 				.modal__home_body {
 			    	top: 40vh;
@@ -140,7 +140,7 @@
 			    }
 			}
 			&_inside-stand {	
-				background-position: 58% 58%;
+				background-position: 58% 55%;
     			background-size: 200% 425%;
 				.modal__home_body {
 			    	top: 20vh;
@@ -148,7 +148,7 @@
 			    }
 			}
 			&_x-banner {
-				background-position: 122% 58%;
+				background-position: 121% 55%;
     			background-size: 116% 370%;
 				.modal__home_body {
 			    	top: 20vh;

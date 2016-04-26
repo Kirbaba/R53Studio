@@ -33,6 +33,26 @@
 		</div>
 	</footer>
 
+	<a href="#" id="callme" >
+		<div id="callmeMain"></div>
+	</a>
+
+	<!-- open .modal__callme -->
+	<div class="modal__callme">
+		<!-- open .modal__callme_body -->
+		<div class="modal__callme_body">
+			<a href="" class="modal__callme_close"></a>
+			<h3>У вас вопросы? <br />Хотите, перезвоним вам? </h3>
+			<form action="#">
+				<input type="tel" class="modal__callme_input" placeholder="Номер телефона" />
+				<button type="submit" class="modal__callme_btn">Жду звонка <span></span></button>
+				<small>Звонок бесплатный</small>
+			</form>
+		</div>
+		<!-- close .modal__callme_body -->
+	</div>
+	<!-- close .modal__callme -->
+
 	<?= do_shortcode('[advertising]'); ?>
 
 <?php wp_footer(); // необходимо для работы плагинов и функционала  ?>

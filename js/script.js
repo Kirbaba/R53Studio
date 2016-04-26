@@ -146,6 +146,18 @@ jQuery(document).ready(function($) {
 		$(this).parent().parent().parent().fadeOut();	
 		$('.show-info').fadeIn();	
 	});
+
+	$('#callme').on("click", function(event) {
+		 event.preventDefault();
+		 $(this).fadeOut();
+		$(".modal__callme").fadeIn();	
+	});
+
+	$('.modal__callme_close').on("click", function(event) {
+		 event.preventDefault();
+		$(".modal__callme").fadeOut();	
+		$("#callme").fadeIn();	
+	});
 	
 	(function () {
          lightbox.option({
