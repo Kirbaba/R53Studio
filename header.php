@@ -42,11 +42,6 @@
         </div>
         <!-- close .header__logo -->
         <!-- open .header__menu -->
-        <!--<ul class="header__menu">
-            <li><a href="#">ПОРТФОЛИО</a></li>
-            <li><a href="#">СТАТЬИ</a></li>
-            <li><a href="#">КОНТАКТЫ </a></li>
-        </ul>-->
         <?php $args = array( // опции для вывода верхнего меню, чтобы они работали, меню должно быть создано в админке
             'theme_location' => 'top', // идентификатор меню, определен в register_nav_menus() в functions.php
             'container' => false, // обертка списка, тут не нужна
