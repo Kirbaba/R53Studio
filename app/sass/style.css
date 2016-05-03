@@ -291,6 +291,213 @@ ul {
   display: inline-block;
   width: auto; }
 
+/* Call me button */
+#callme {
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  opacity: 0.8;
+  z-index: 99990; }
+
+#callme #callmeMain {
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: blue;
+  width: 70px;
+  height: 70px;
+  -webkit-animation: zcwmini2 1.5s 0s ease-out infinite;
+  -moz-animation: zcwmini2 1.5s 0s ease-out infinite;
+  animation: zcwmini2 1.5s 0s ease-out infinite; }
+
+#callme #callmeMain:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(https://ss.zadarma.com/callbackWidget/images/mini.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-animation: zcwphone2 1.5s linear infinite;
+  -moz-animation: zcwphone2 1.5s linear infinite;
+  animation: zcwphone2 1.5s linear infinite; }
+
+@-webkit-keyframes zcwphone {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  25% {
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg); }
+  50% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  75% {
+    -ms-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg); }
+  100% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+@-moz-keyframes zcwphone {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  25% {
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg); }
+  50% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  75% {
+    -ms-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg); }
+  100% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+@keyframes zcwphone {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  25% {
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg); }
+  50% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  75% {
+    -ms-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg); }
+  100% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+@-webkit-keyframes zcwphone2 {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  25% {
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg); }
+  50% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  75% {
+    -ms-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg); }
+  100% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+@-moz-keyframes zcwphone2 {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  25% {
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg); }
+  50% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  75% {
+    -ms-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg); }
+  100% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+@keyframes zcwphone2 {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  25% {
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg); }
+  50% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  75% {
+    -ms-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg); }
+  100% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+@-webkit-keyframes zcwmini {
+  0% {
+    box-shadow: 0 0 8px 6px rgba(0, 0, 255, 0), 0 0 0 0 rgba(0, 0, 255, 0), 0 0 0 0 rgba(0, 0, 255, 0); }
+  10% {
+    box-shadow: 0 0 8px 6px, 0 0 12px 10px transparent, 0 0 12px 14px; }
+  100% {
+    box-shadow: 0 0 8px 6px rgba(0, 0, 255, 0), 0 0 0 40px transparent, 0 0 0 40px rgba(0, 0, 255, 0); } }
+@-moz-keyframes zcwmini {
+  0% {
+    box-shadow: 0 0 8px 6px rgba(0, 0, 255, 0), 0 0 0 0 transparent, 0 0 0 0 rgba(0, 0, 255, 0); }
+  10% {
+    box-shadow: 0 0 8px 6px, 0 0 12px 10px transparent, 0 0 12px 14px; }
+  100% {
+    box-shadow: 0 0 8px 6px rgba(0, 0, 255, 0), 0 0 0 40px transparent, 0 0 0 40px rgba(0, 0, 255, 0); } }
+@keyframes zcwmini {
+  0% {
+    box-shadow: 0 0 8px 6px rgba(0, 0, 255, 0), 0 0 0 0 transparent, 0 0 0 0 rgba(0, 0, 255, 0); }
+  10% {
+    box-shadow: 0 0 8px 6px, 0 0 12px 10px transparent, 0 0 12px 14px; }
+  100% {
+    box-shadow: 0 0 8px 6px rgba(0, 0, 255, 0), 0 0 0 40px transparent, 0 0 0 40px rgba(0, 0, 255, 0); } }
+@-webkit-keyframes zcwmini2 {
+  0% {
+    box-shadow: 0 0 8px 6px rgba(0, 0, 255, 0), 0 0 0 0 transparent, 0 0 0 0 rgba(0, 0, 255, 0); }
+  10% {
+    box-shadow: 0 0 8px 6px, 0 0 12px 10px transparent, 0 0 12px 14px; }
+  100% {
+    box-shadow: 0 0 8px 6px rgba(0, 0, 255, 0), 0 0 0 40px transparent, 0 0 0 40px rgba(0, 0, 255, 0); } }
+@-moz-keyframes zcwmini2 {
+  0% {
+    box-shadow: 0 0 8px 6px rgba(0, 0, 255, 0), 0 0 0 0 transparent, 0 0 0 0 rgba(0, 0, 255, 0); }
+  10% {
+    box-shadow: 0 0 8px 6px, 0 0 12px 10px transparent, 0 0 12px 14px; }
+  100% {
+    box-shadow: 0 0 8px 6px rgba(0, 0, 255, 0), 0 0 0 40px transparent, 0 0 0 40px rgba(0, 0, 255, 0); } }
+@keyframes zcwmini2 {
+  0% {
+    box-shadow: 0 0 8px 6px rgba(0, 0, 255, 0), 0 0 0 0 transparent, 0 0 0 0 rgba(0, 0, 255, 0); }
+  10% {
+    box-shadow: 0 0 8px 6px, 0 0 12px 10px transparent, 0 0 12px 14px; }
+  100% {
+    box-shadow: 0 0 8px 6px rgba(0, 0, 255, 0), 0 0 0 40px transparent, 0 0 0 40px rgba(0, 0, 255, 0); } }
 .header {
   float: left;
   width: 100%;
@@ -503,9 +710,9 @@ ul {
     .stock__form p {
       font-size: 13px;
       text-transform: uppercase; }
-    .stock__form_input, .stock__form_text, .stock__form_submit, .stock__form_file {
+    .stock__form_input, .modal__callme_input, .stock__form_text, .stock__form_submit, .modal__callme_btn, .stock__form_file {
       width: 100%; }
-    .stock__form_input, .stock__form_text {
+    .stock__form_input, .modal__callme_input, .stock__form_text {
       float: left;
       border: 1px solid #dedecf;
       -webkit-border-radius: 7px;
@@ -566,7 +773,7 @@ ul {
         cursor: pointer;
         z-index: 9;
         position: relative; }
-    .stock__form_submit {
+    .stock__form_submit, .modal__callme_btn {
       position: relative;
       color: #362A2A;
       text-transform: uppercase;
@@ -582,7 +789,7 @@ ul {
       -ms-transition: all 0.3s linear;
       -o-transition: all 0.3s linear;
       transition: all 0.3s linear; }
-      .stock__form_submit span {
+      .stock__form_submit span, .modal__callme_btn span {
         position: absolute;
         bottom: -5px;
         left: 0;
@@ -595,10 +802,10 @@ ul {
         -ms-transition: all 0.3s linear;
         -o-transition: all 0.3s linear;
         transition: all 0.3s linear; }
-      .stock__form_submit:hover, .stock__form_submit:focus {
+      .stock__form_submit:hover, .modal__callme_btn:hover, .stock__form_submit:focus, .modal__callme_btn:focus {
         color: #FFF;
         background-color: #B00000; }
-        .stock__form_submit:hover span, .stock__form_submit:focus span {
+        .stock__form_submit:hover span, .modal__callme_btn:hover span, .stock__form_submit:focus span, .modal__callme_btn:focus span {
           border-top: 5px solid #fff; }
 
 .clockContainer h2 {
@@ -682,7 +889,7 @@ ul {
     display: inline-block; }
 
 .modal__home {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -695,30 +902,31 @@ ul {
   .modal__home_lightbox, .modal__home_tablo, .modal__home_banner, .modal__home_letters, .modal__home_stella, .modal__home_sign, .modal__home_flag, .modal__home_stander, .modal__home_transport, .modal__home_plate, .modal__home_x-banner, .modal__home_inside-stand, .modal__home_signboard, .modal__home_inside-lightbox {
     display: none;
     background-repeat: repeat;
-    background-position: 79% -215%;
+    background-position: 79% -265%;
     -webkit-background-size: 175%;
     -o-background-size: 175%;
-    background-size: 175%; }
+    background-size: 175%;
+    background-attachment: fixed; }
     .modal__home_lightbox .modal__home_body, .modal__home_tablo .modal__home_body, .modal__home_banner .modal__home_body, .modal__home_letters .modal__home_body, .modal__home_stella .modal__home_body, .modal__home_sign .modal__home_body, .modal__home_flag .modal__home_body, .modal__home_stander .modal__home_body, .modal__home_transport .modal__home_body, .modal__home_plate .modal__home_body, .modal__home_x-banner .modal__home_body, .modal__home_inside-stand .modal__home_body, .modal__home_signboard .modal__home_body, .modal__home_inside-lightbox .modal__home_body {
       top: 52vh;
       margin-left: 275px; }
   .modal__home_tablo {
-    background-position: 53% 723%;
+    background-position: 53% 48%;
     -webkit-background-size: 200%;
     -o-background-size: 200%;
     background-size: 200%; }
   .modal__home_letters {
-    background-position: 55% 95%;
+    background-position: 55% 86%;
     -webkit-background-size: 350% 200%;
     -o-background-size: 350% 200%;
     background-size: 350% 200%; }
   .modal__home_banner {
-    background-position: 34% 82%;
+    background-position: 34% 62%;
     -webkit-background-size: 200% 200%;
     -o-background-size: 200% 200%;
     background-size: 200% 200%; }
   .modal__home_stella {
-    background-position: -44% 58%;
+    background-position: -44% 51%;
     -webkit-background-size: 80% 450%;
     -o-background-size: 80% 450%;
     background-size: 80% 450%; }
@@ -726,44 +934,44 @@ ul {
       top: 30vh;
       margin-left: 575px; }
   .modal__home_sign {
-    background-position: 94% 3%;
-    background-size: 140%; }
+    background-position: 131% 405%;
+    background-size: 120%; }
     .modal__home_sign .modal__home_body {
       top: 24vh;
       margin-left: 575px; }
   .modal__home_flag {
-    background-position: 66% -65%; }
+    background-position: 66% -319%; }
     .modal__home_flag .modal__home_body {
       top: 24vh;
       margin-left: 575px; }
   .modal__home_stander {
-    background-position: 74% 55%;
+    background-position: 74% -2%;
     background-size: 150% 160%; }
     .modal__home_stander .modal__home_body {
       top: 24vh;
       margin-left: 575px; }
   .modal__home_transport {
-    background-position: 49% 48%;
+    background-position: 49% 25%;
     background-size: 280%; }
     .modal__home_transport .modal__home_body {
       top: 20vh; }
   .modal__home_plate {
-    background-position: 63% 126%;
+    background-position: 63% 68%;
     background-size: 280%; }
   .modal__home_inside-lightbox {
-    background-position: 52% 88%;
+    background-position: 52% 79%;
     background-size: 280% 220%; }
   .modal__home_signboard {
-    background-position: 50% 84%;
+    background-position: 50% 67%;
     background-size: 415% 200%; }
   .modal__home_inside-stand {
-    background-position: 57% 58%;
+    background-position: 57% 51%;
     background-size: 240% 450%; }
     .modal__home_inside-stand .modal__home_body {
       top: 24vh;
       margin-left: 575px; }
   .modal__home_x-banner {
-    background-position: 81% 59%;
+    background-position: 81% 50%;
     background-size: 142% 370%; }
     .modal__home_x-banner .modal__home_body {
       top: 24vh;
@@ -802,7 +1010,7 @@ ul {
       text-decoration: underline; }
     .modal__home_body p {
       font-size: 16px; }
-  .modal__home_close {
+  .modal__home_close, .modal__callme_close {
     position: absolute;
     top: 0;
     right: -30px;
@@ -810,6 +1018,45 @@ ul {
     height: 30px;
     background-image: url("../img/error-transparent.png");
     background-repeat: no-repeat; }
+
+.modal__callme {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .modal__callme_body {
+    width: 400px;
+    height: auto;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 5px solid #fb0000;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .modal__callme_input {
+    width: 60%; }
+  .modal__callme_btn {
+    width: 35%;
+    float: right;
+    font-size: 12px;
+    border: 1px solid #fb0000; }
+    .modal__callme_btn:hover span, .modal__callme_btn:focus span {
+      border-top-color: #fb0000; }
+  .modal__callme small {
+    float: left;
+    width: 100%; }
+  .modal__callme_close {
+    right: 3px;
+    top: 3px; }
 
 .page {
   background-color: #FFF; }
@@ -995,11 +1242,11 @@ ul {
       top: 12vh; }
 
   .modal__home_lightbox, .modal__home_tablo, .modal__home_banner, .modal__home_letters, .modal__home_stella, .modal__home_sign, .modal__home_flag, .modal__home_stander, .modal__home_transport, .modal__home_plate, .modal__home_x-banner, .modal__home_inside-stand, .modal__home_signboard, .modal__home_inside-lightbox {
-    background-position: 76% 255%; }
+    background-position: 76% 123%; }
     .modal__home_lightbox .modal__home_body, .modal__home_tablo .modal__home_body, .modal__home_banner .modal__home_body, .modal__home_letters .modal__home_body, .modal__home_stella .modal__home_body, .modal__home_sign .modal__home_body, .modal__home_flag .modal__home_body, .modal__home_stander .modal__home_body, .modal__home_transport .modal__home_body, .modal__home_plate .modal__home_body, .modal__home_x-banner .modal__home_body, .modal__home_inside-stand .modal__home_body, .modal__home_signboard .modal__home_body, .modal__home_inside-lightbox .modal__home_body {
       top: 40vh; }
   .modal__home_tablo {
-    background-position: 54% 112%; }
+    background-position: 54% 75%; }
     .modal__home_tablo .modal__home_body {
       top: 40vh; }
   .modal__home_letters {
@@ -1008,12 +1255,12 @@ ul {
     background-size: 350% 180%;
     background-position: 55% 105%; }
   .modal__home_banner {
-    -webkit-background-size: 200% 215%;
+    -webkit-background-size: 200% 190%;
     -o-background-size: 200% 215%;
     background-size: 200% 215%;
     background-position: 38%  75%; }
   .modal__home_stella {
-    background-position: -36% 57%;
+    background-position: -36% 55%;
     -webkit-background-size: 80% 450%;
     -o-background-size: 80% 450%;
     background-size: 80% 450%; }
@@ -1021,33 +1268,33 @@ ul {
       top: 30vh;
       margin-left: 575px; }
   .modal__home_sign {
-    background-position: 124% 77%;
+    background-position: 124% 62%;
     background-size: 120% 147%; }
     .modal__home_sign .modal__home_body {
       top: 30vh;
       margin-left: 575px; }
   .modal__home_flag {
-    background-position: 66% 125%; }
+    background-position: 66% 55%; }
     .modal__home_flag .modal__home_body {
       top: 20vh;
       margin-left: 575px; }
   .modal__home_stander {
-    background-position: 73% 45%; }
+    background-position: 73% 29%; }
     .modal__home_stander .modal__home_body {
       top: 20vh;
       margin-left: 575px; }
   .modal__home_transport {
-    background-position: 49% 46%;
+    background-position: 48% 32%;
     background-size: 225% 186%; }
     .modal__home_transport .modal__home_body {
       top: 20vh; }
   .modal__home_plate {
-    background-position: 65% 91%;
+    background-position: 65% 85%;
     background-size: 225% 186%; }
     .modal__home_plate .modal__home_body {
       top: 40vh; }
   .modal__home_inside-lightbox {
-    background-position: 52% 87%;
+    background-position: 52% 84%;
     background-size: 233% 229%; }
     .modal__home_inside-lightbox .modal__home_body {
       top: 40vh; }
@@ -1057,13 +1304,13 @@ ul {
     .modal__home_signboard .modal__home_body {
       top: 40vh; }
   .modal__home_inside-stand {
-    background-position: 58% 58%;
+    background-position: 58% 55%;
     background-size: 200% 425%; }
     .modal__home_inside-stand .modal__home_body {
       top: 20vh;
       margin-left: 575px; }
   .modal__home_x-banner {
-    background-position: 122% 58%;
+    background-position: 121% 55%;
     background-size: 116% 370%; }
     .modal__home_x-banner .modal__home_body {
       top: 20vh;
