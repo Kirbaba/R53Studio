@@ -24,7 +24,7 @@ get_header(); // подключаем header.php ?>
 
 					<div class="day_group">
 						<a href="#" class="day-switch day-switch_night"></a>
-						<a href="#" class="day-switch day-switch_day"></a>
+						<a href="#" class="day-switch day-switch_day day-switch_day_active"></a>
 					</div>
 
 					<a href="#" class="show-info show-info_lightbox" data-modal="modal__home_lightbox">СВЕТОВОЙ КОРОБ</a>

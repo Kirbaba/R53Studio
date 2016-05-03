@@ -95,7 +95,7 @@ return del.sync('dist'); // Удаляем папку dist перед сборк
 });*/
 
 gulp.task('img', function() {
-    return gulp.src('app/img/**/*') // Берем все изображения из app
+    return gulp.src('img/**/*') // Берем все изображения из app
         .pipe(cache(imagemin({ // Сжимаем их с наилучшими настройками с учетом кеширования
             interlaced: true,
             progressive: true,
@@ -104,7 +104,7 @@ gulp.task('img', function() {
             }],
             use: [pngquant()]
         })))
-        .pipe(gulp.dest('img')); // Выгружаем на продакшен
+        .pipe(gulp.dest('img-gulp')); // Выгружаем на продакшен
 });
 
 gulp.task('build', ['img', 'sass', 'scripts'], function() {

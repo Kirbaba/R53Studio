@@ -179,6 +179,7 @@
     right: 0;
     left: 0;
     bottom: 0;
+    z-index: 99999;
     background-color: rgba(0, 0, 0, .5);
 	&_body {
 		width: 400px;

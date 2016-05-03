@@ -6,12 +6,16 @@ jQuery(document).ready(function($) {
 	});
 
 	$('.day-switch_night').on("click", function(event) {
-		 event.preventDefault();
+		event.preventDefault();
+		$('.day-switch_day').removeClass('day-switch_day_active');
+		$(this).addClass('day-switch_night_active');
 		$('.site-content').removeClass('bg_day');
 		$('.site-content').addClass('bg_night');		
 	});
 	$('.day-switch_day').on("click", function(event) {
 		 event.preventDefault();
+		$('.day-switch_night').removeClass('day-switch_night_active');
+		$(this).addClass('day-switch_day_active');
 		$('.site-content').removeClass('bg_night');
 		$('.site-content').addClass('bg_day');		
 	});
