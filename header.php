@@ -55,15 +55,10 @@
         <!-- open .header__contacts -->
         <div class="header__contacts">
             <h3>
-                <sup>+375 </sup>
+                +375 
                 <?= get_theme_mod('phone_1_textbox') ?>
                 <!--<span class="header__contacts_city">г.Минск</span>-->
             </h3>
-            <!--<h3>
-                <sup>+375</sup>
-                <?/*= get_theme_mod('phone_2_textbox') */?>
-                <span class="header__contacts_city"><small>г. Осиповичи</small></span>
-            </h3>-->
         </div>
         <!-- close .header__contacts -->
     </div>

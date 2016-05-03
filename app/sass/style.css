@@ -118,19 +118,30 @@ ul {
     background-repeat: no-repeat; }
     .day_group .day-switch_night {
       background-image: url("../img/Layer-2.png"); }
+      .day_group .day-switch_night_active {
+        background-image: url("../img/Layer-2-active.png"), -owg-linear-gradient(bottom, #000 0%, #45484d 100%);
+        background-image: url("../img/Layer-2-active.png"), -webkit-linear-gradient(bottom, #000 0%, #45484d 100%);
+        background-image: url("../img/Layer-2-active.png"), -moz-linear-gradient(bottom, #000 0%, #45484d 100%);
+        background-image: url("../img/Layer-2-active.png"), -o-linear-gradient(bottom, #000 0%, #45484d 100%);
+        background-image: url("../img/Layer-2-active.png"), linear-gradient(bottom, #000 0%, #45484d 100%);
+        -webkit-border-radius: 10px 0 0 10px;
+        -moz-border-radius: 10px 0 0 10px;
+        -ms-border-radius: 10px 0 0 10px;
+        border-radius: 10px 0 0 10px; }
     .day_group .day-switch_day {
-      background-image: url("../img/Layer-3.png");
-      height: 35px;
-      border: 1px solid #000;
-      background-image: url("../img/Layer-3.png"), -owg-linear-gradient(bottom, #000 0%, #45484d 100%);
-      background-image: url("../img/Layer-3.png"), -webkit-linear-gradient(bottom, #000 0%, #45484d 100%);
-      background-image: url("../img/Layer-3.png"), -moz-linear-gradient(bottom, #000 0%, #45484d 100%);
-      background-image: url("../img/Layer-3.png"), -o-linear-gradient(bottom, #000 0%, #45484d 100%);
-      background-image: url("../img/Layer-3.png"), linear-gradient(bottom, #000 0%, #45484d 100%);
-      -webkit-border-radius: 0 10px 10px 0;
-      -moz-border-radius: 0 10px 10px 0;
-      -ms-border-radius: 0 10px 10px 0;
-      border-radius: 0 10px 10px 0; }
+      background-image: url("../img/Layer-3-active.png");
+      height: 35px; }
+      .day_group .day-switch_day_active {
+        border: 1px solid #000;
+        background-image: url("../img/Layer-3.png"), -owg-linear-gradient(bottom, #000 0%, #45484d 100%);
+        background-image: url("../img/Layer-3.png"), -webkit-linear-gradient(bottom, #000 0%, #45484d 100%);
+        background-image: url("../img/Layer-3.png"), -moz-linear-gradient(bottom, #000 0%, #45484d 100%);
+        background-image: url("../img/Layer-3.png"), -o-linear-gradient(bottom, #000 0%, #45484d 100%);
+        background-image: url("../img/Layer-3.png"), linear-gradient(bottom, #000 0%, #45484d 100%);
+        -webkit-border-radius: 0 10px 10px 0;
+        -moz-border-radius: 0 10px 10px 0;
+        -ms-border-radius: 0 10px 10px 0;
+        border-radius: 0 10px 10px 0; }
 
 .owl_modal__item {
   display: block;
@@ -526,16 +537,19 @@ ul {
         font-size: 16px;
         font-weight: normal;
         text-shadow: 3px 4px 2px rgba(169, 31, 39, 0.75); }
+        .header ul.header__menu li a:hover, .header ul.header__menu li a:active, .header ul.header__menu li a:focus {
+          text-decoration: underline; }
   .header__contacts {
     display: inline-block;
     vertical-align: middle;
-    float: right; }
+    float: right;
+    margin: 20px 0; }
     .header__contacts h3 {
-      font-size: 32px;
+      font-size: 26px;
       padding-left: 30px;
       background-image: url("../img/phone.png");
       background-repeat: no-repeat;
-      background-position: 0 50%;
+      background-position: 0 100%;
       margin: 0;
       font-weight: 500;
       line-height: 28px; }
@@ -572,12 +586,17 @@ ul {
   float: left;
   position: relative;
   width: calc(100% - 215px);
-  height: 90vh; }
+  height: 85vh; }
   .workspace a.go-btn {
     position: absolute;
     top: 0;
     left: 15px;
     padding: 12px 20px;
+    width: 205px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
     text-transform: uppercase;
     font-size: 12px;
     color: #000;
@@ -608,7 +627,9 @@ ul {
   width: 100%;
   background-color: #FFF; }
   .trust h2 {
-    text-align: center; }
+    text-align: center;
+    font-weight: normal;
+    margin-top: 40px; }
   .trust__carousel {
     width: 90%;
     margin: 0 auto;
@@ -818,7 +839,12 @@ ul {
   width: 215px;
   background-color: rgba(255, 255, 255, 0.75);
   padding: 0;
-  position: relative; }
+  position: relative;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden; }
   .sidebar-left .accordion {
     width: 100%; }
     .sidebar-left .accordion h3 {
@@ -830,7 +856,7 @@ ul {
       width: 100%;
       margin: 0;
       padding: 5px;
-      border-bottom: 1px solid #001e9d;
+      border-bottom: 1px solid gray;
       text-transform: uppercase;
       font-size: 12px;
       color: #000; }
@@ -841,6 +867,8 @@ ul {
         text-transform: uppercase;
         font-size: 12px;
         color: #000; }
+      .sidebar-left .accordion h3:hover, .sidebar-left .accordion h3:focus, .sidebar-left .accordion h3:active {
+        background-color: #FFF; }
     .sidebar-left .accordion h3.active-title {
       border: none; }
       .sidebar-left .accordion h3.active-title a.accordion_title {
@@ -871,12 +899,15 @@ ul {
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       border-bottom: 0;
-      border-bottom: 1px solid #001e9d; }
+      border-bottom: 1px solid gray; }
       .sidebar-left .accordion ul li a {
         display: block;
         font-size: 12px;
         color: #000;
         padding: 5px 0; }
+        .sidebar-left .accordion ul li a:hover, .sidebar-left .accordion ul li a:active, .sidebar-left .accordion ul li a:focus {
+          color: #BB0500;
+          text-decoration: underline; }
   .sidebar-left_go-btn {
     margin-left: 10px;
     margin-top: 10px;
@@ -1026,6 +1057,7 @@ ul {
   right: 0;
   left: 0;
   bottom: 0;
+  z-index: 99999;
   background-color: rgba(0, 0, 0, 0.5); }
   .modal__callme_body {
     width: 400px;

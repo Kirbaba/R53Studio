@@ -28,7 +28,10 @@
 				color: #FFF;
 				font-size: 16px;
 				font-weight: normal;
-				@include text-shadow(3px 4px 2px rgba(169,31,39,.75))
+				@include text-shadow(3px 4px 2px rgba(169,31,39,.75));
+				&:hover, &:active, &:focus {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
@@ -36,12 +39,13 @@
 		display: inline-block;
 		vertical-align: middle;
 		float: right;
+		margin: 20px 0;
 		h3 {
-			font-size: 32px;
+			font-size: 26px;
 			padding-left: 30px;
 			background-image: url('../img/phone.png');
 			background-repeat: no-repeat;
-			background-position: 0 50%;
+			background-position: 0 100%;
 			margin: 0;
 			font-weight: 500;
 			line-height: 28px;

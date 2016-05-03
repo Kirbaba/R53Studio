@@ -86,14 +86,20 @@
 		background-repeat: no-repeat;
 		&_night {
 			background-image: url('../img/Layer-2.png');
+			&_active {
+				@include background-image(url('../img/Layer-2-active.png'),linear-gradient(bottom, #000 0%, #45484d 100%));
+				@include border-radius(10px 0 0 10px);
+			}
 		}
 		&_day {
-			background-image: url('../img/Layer-3.png');
+			background-image: url('../img/Layer-3-active.png');
 			// width: 50px;
 			height: 35px;
+			&_active {
 			border: 1px solid #000;
-			@include background-image(url('../img/Layer-3.png'),linear-gradient(bottom, #000 0%, #45484d 100%));
-			@include border-radius(0 10px 10px 0);
+				@include background-image(url('../img/Layer-3.png'),linear-gradient(bottom, #000 0%, #45484d 100%));
+				@include border-radius(0 10px 10px 0);
+			}
 		}
 	}
 }
