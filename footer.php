@@ -49,7 +49,7 @@
 			<!-- open .footer__contacts -->
 			<div class="footer__contacts">
 			<!-- open .footer__copyright -->
-				<p class="footer__contacts_copyr">© 2015 R53Studio</p>
+				<p class="footer__contacts_copyr">© 2004-2015 R53studio</p>
 				<!-- close .footer__copyright -->
 				<p class="footer__contacts_slogan">ОТЛИЧНОЕ КАЧЕСТВО ЗА РАЗУМНЫЕ ДЕНЬГИ</p>
 			</div>		
