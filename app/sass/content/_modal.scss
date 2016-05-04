@@ -18,6 +18,7 @@
 			     -o-background-size: 175%;
 			        background-size: 175%;
 	        background-attachment: fixed;
+	        height: 100vh;
 		    .modal__home_body {
 		    	top: 52vh;
 		    	margin-left: 275px;
@@ -59,7 +60,7 @@
 		    }
 		}
 		&_sign {
-			background-position: 131% 405%;
+			background-position: 79% 119vh;
     		background-size: 120%;
 			.modal__home_body {
 		    	top: 24vh;
@@ -67,7 +68,7 @@
 		    }
 		}
 		&_flag {
-			background-position: 66% -319%;
+			background-position: 66% -329%;
 			.modal__home_body {
 		    	top: 24vh;
 		    	margin-left: 575px;
