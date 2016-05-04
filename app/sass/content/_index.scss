@@ -157,7 +157,7 @@
 		-webkit-box-sizing: border-box;
 		   -moz-box-sizing: border-box;
 		        box-sizing: border-box;
-		padding: 0 50px;
+		padding: 0 50px 20px;
 	}
 	&__baner {
 		float: left;
@@ -166,7 +166,7 @@
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
-		padding: 35px 25px 25px;
+		padding: 35px 15px 25px;
 		text-align: center;
 		h3 {
 			text-transform: uppercase;
@@ -191,7 +191,7 @@
 		border-left: 22% solid transparent;
 		border-right: 22% solid transparent;
 		padding: 15px 25px 0;
-		margin-top: 35px;
+		margin-top: 15px;
 		color: #FFF;
 		text-align: center;
 		-webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%, 0 25%);
@@ -302,4 +302,62 @@
 	}
 }
 
-
+.home__form {
+	float: left;
+	width: 100%;
+	background-color: #576E94;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 15px 0;
+	color: #fff;
+	form {
+		float: left;
+		width: 100%;
+		background-color: #fff;
+		padding: 20px;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		margin: 15px 0;
+	}
+	&_input, &_btn {
+		width: 28%;
+		margin: 0 10px;
+		height: 35px;
+		line-height: 35px;
+		border: none;
+	}
+	&_input {		
+		padding: 0 15px;
+		text-align: center;
+		outline: none;
+		-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,.5);
+		        box-shadow: 0px 0px 15px 0px rgba(0,0,0,.5);
+	}
+	&_btn {
+		font-weight: 700;
+		text-transform: uppercase;
+		background-color: #BE2E21;
+		color: #fff;
+		cursor: pointer;
+		border: none;
+		-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,200,.5);
+		        box-shadow: 0px 0px 15px 0px rgba(0,0,200,.5);
+		@include transition(.4s);
+		&:hover, &:active, &:focus {
+			background-color: darken(#BE2E21,10%);
+		}
+	}
+	h2 {
+		font-size: 36px;
+		margin: 15px 0;
+	}
+	h4{
+		font-size: 23px;
+		margin-bottom: 0;
+	}
+	p {
+		font-size: 18px;
+	}
+}

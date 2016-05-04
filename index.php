@@ -69,9 +69,9 @@ get_header(); // подключаем header.php ?>
 				<!-- open .stock__baner -->
 				<div class="stock__baner">
 					<img src="<?php bloginfo('template_directory'); ?>/img/152-6302-offer-ribbon.png" alt="" />
-					<h3>Успей заказать наружную рекламу<br /> до 1 июля 2016 <br />	 и получи <span class="color_red">дизайн в подарок</span></h3>
+					<h3>УСПЕЙ ЗАКАЗАТЬ СВЕТОВУЮ ВЫВЕСКУ ДО 1 ИЮЛЯ 2016 И ПОЛУЧИ <br /><span class="color_red">ДИЗАЙН МАКЕТА В ПОДАРОК.</span></h3>
 					<div class="clockContainer">
-					<h2>До конца акции осталось:</h2>
+					<!-- <h2>До конца акции осталось:</h2> -->
 					<div class="clock"></div>
 				</div>
 				</div>
@@ -100,5 +100,22 @@ get_header(); // подключаем header.php ?>
 		<!-- close .container -->
 	</section>
 	<!-- close .stock -->
+
+	<!-- open .home__form -->
+	<section class="home__form">
+		<!-- open .container -->
+		<div class="container">
+			<h2>Далеко-далеко за словесными горами.</h2>
+			<h4>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Большой оксмокс что родного рот.</h4>
+			<form action="#">
+				<input type="text" name="home__form_name" class="home__form_input" placeholder="Ваше имя"/>
+				<input type="email" name="home__form_mail" class="home__form_input" placeholder="Ваш e-mail"/>
+				<button class="home__form_btn">Далеко-далеко</button>
+			</form>
+			<p>Далеко-далеко за словесными горами в стране.</p>
+		</div>
+		<!-- close .container -->
+	</section>
+	<!-- close .home__form -->
 
 <?php get_footer(); // подключаем footer.php ?>

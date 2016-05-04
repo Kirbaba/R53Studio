@@ -205,9 +205,31 @@
 		width: 35%;
 		float: right;
 		font-size: 12px;
-		@extend .stock__form_submit;
-		border: 1px solid #fb0000;
+		position: relative;
+		border: 1px solid #fb0000;		
+		color: #362A2A;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: bold;
+		padding: 10px;
+		background-color: #FFF;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		@include transition(.3s);
+		span {
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			right: 0;
+			border-top: 5px solid #b00000;
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			@include transition(.3s);
+		}
 		&:hover, &:focus {
+			color: #FFF;
+			background-color: #B00000;
 			span {
 				border-top-color:#fb0000;
 			}
