@@ -223,10 +223,12 @@
 			background-color: #fff;
 			@include box-shadow(0 1px 0 rgba(255,255,255,.91), inset 1px 2px 5px rgba(0,0,0,.07));
 			outline: none;
+			font-size: 12px;
 		}
 		&_text {
 			resize: none;
 			margin-bottom: 10px;
+			font-size: 12px;
 		}
 		&_file {
 			margin-bottom: 10px;
@@ -306,6 +308,7 @@
 	float: left;
 	width: 100%;
 	background-color: #576E94;
+	@include background-image(linear-gradient(top, #586488 0%, #44a1d1 100%));
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -354,7 +357,7 @@
 		margin: 15px 0;
 	}
 	h4{
-		font-size: 23px;
+		font-size: 18px;
 		margin-bottom: 0;
 	}
 	p {

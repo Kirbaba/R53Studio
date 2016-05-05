@@ -41,7 +41,7 @@
 		display: inline-block;
 		vertical-align: middle;
 		float: right;
-		margin: 20px 0;
+		margin: 20px 0 0;
 		h3 {
 			font-size: 26px;
 			padding-left: 30px;
@@ -54,6 +54,11 @@
 			sup {
 				font-size: 26px;
 			}
+		}
+		h4 {
+			font-weight: normal;
+			margin: 0;
+			text-align: center;
 		}
 		&_city {
 			font-size: 32px;

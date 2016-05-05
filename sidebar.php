@@ -5,8 +5,9 @@
  * @subpackage your-clean-template-3
  */
 ?>
+<?= do_shortcode('[left-menu]') ?>
 <!-- open .accordion -->
-<aside class="sidebar-left">
+<!--<aside class="sidebar-left">
 	<section class="accordion">
 		<h3>
 			<a href="#" class="accordion_title">Наружная реклама</a>
@@ -42,6 +43,6 @@
 		<h3><a href="" class="accordion_title">обслуживание </a></h3>
 		
 	</section>
-</aside>
+</aside>-->
 <!-- close .accordion -->
 <?php  ?>

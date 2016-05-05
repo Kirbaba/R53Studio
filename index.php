@@ -84,7 +84,7 @@ get_header(); // подключаем header.php ?>
 						<input type="text" name="contacts_name" class="stock__form_input" placeholder="Ваше имя"/>
 						<input type="email" name="contacts_email" class="stock__form_input"  placeholder="E-mail"/>
 						<input type="tel" name="contacts_phone" class="stock__form_input"  placeholder="Номер телефона"/>
-						<textarea name="contacts_comment" class="stock__form_text" placeholder="Сообщение"></textarea>
+						<textarea name="contacts_comment" class="stock__form_text" placeholder=""></textarea>
 						<input type="hidden" name="action" value="add_order">
 						<input type="file" id="stock__form_file" name="file" class="stock__form_file"  placeholder="прикрепить файл"/>
 						<label for="stock__form_file"><span class="js_input_file">прикрепить файл</span></label>
@@ -105,14 +105,14 @@ get_header(); // подключаем header.php ?>
 	<section class="home__form">
 		<!-- open .container -->
 		<div class="container">
-			<h2>Далеко-далеко за словесными горами.</h2>
-			<h4>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Большой оксмокс что родного рот.</h4>
+			<h2>Узнавайте о новых акциях первыми</h2>
+			<h4>Мы ежемесячно публикуем новые выгодные предложения для наших клиентов, <br /> чтобы узнавать о них одним из первых, внесите ваши данные в форму ниже прямо сейчас</h4>
 			<form action="#">
-				<input type="text" name="home__form_name" class="home__form_input" placeholder="Ваше имя"/>
+				<input type="text" name="home__form_name" class="home__form_input" placeholder="Ваше имя или название организации"/>
 				<input type="email" name="home__form_mail" class="home__form_input" placeholder="Ваш e-mail"/>
-				<button class="home__form_btn">Далеко-далеко</button>
+				<button class="home__form_btn">Узнавать первым</button>
 			</form>
-			<p>Далеко-далеко за словесными горами в стране.</p>
+			<p>Ваши данные никогда не будут переданы 3-м лицам</p>
 		</div>
 		<!-- close .container -->
 	</section>

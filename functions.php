@@ -24,7 +24,7 @@ require_once TM_DIR . '/lib/clean_comments_constructor.php';
 
 register_nav_menus(array( // Регистрируем 2 меню
 	'top' => 'Верхнее', // Верхнее
-	'left' => 'Боковое' // Внизу
+	'left' => 'Боковое' // Боковое меню
 ));
 
 add_theme_support('post-thumbnails'); // включаем поддержку миниатюр
@@ -401,6 +401,37 @@ function partnersShortcode()
 }
 
 add_shortcode('partners', 'partnersShortcode');
+/*---------------------------------------------— КОНЕЦ НАМ ДОВЕРЯЮТ —------------------------------------------------------*/
+
+/*---------------------------------------------— КОНЕЦ НАМ ДОВЕРЯЮТ —------------------------------------------------------*/
+function leftMenuShortcode()
+{
+	$menu_items = wp_get_nav_menu_items( 'Боковое' ); // получаем элементы меню
+
+	$menu_items = getMenuTree($menu_items);
+
+	$parser = new Parser();
+	$parser->render(TM_DIR . '/views/left_menu.php', ['menu_items' => $menu_items]);
+
+}
+
+add_shortcode('left-menu', 'leftMenuShortcode');
+
+function getMenuTree($arr){
+	$arr_new = [];
+	foreach($arr as $m_item){
+		if($m_item->menu_item_parent == 0){
+			$arr_new[$m_item->ID]['title'] = $m_item->title;
+			$arr_new[$m_item->ID]['url'] = $m_item->url;
+			$arr_new[$m_item->ID]['child'] = false;
+		}
+		else {
+			$arr_new[$m_item->menu_item_parent]['child'][$m_item->ID]['title'] = $m_item->title;
+			$arr_new[$m_item->menu_item_parent]['child'][$m_item->ID]['url'] = $m_item->url;
+		}
+	}
+	return $arr_new;
+}
 /*---------------------------------------------— КОНЕЦ НАМ ДОВЕРЯЮТ —------------------------------------------------------*/
 
 

@@ -57,8 +57,8 @@
             <h3>
                 +375
                 <?= get_theme_mod('phone_1_textbox') ?>
-                <!--<span class="header__contacts_city">г.Минск</span>-->
             </h3>
+            <h4>Мы работаем по всей Беларуси</h4>
         </div>
         <!-- close .header__contacts -->
     </div>

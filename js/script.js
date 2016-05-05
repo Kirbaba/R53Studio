@@ -3,6 +3,8 @@ jQuery(document).ready(function ($) {
 
     $('.accordion > h3 > a').click(function (event) {
         event.preventDefault();
+        var link = $(this).attr('href');
+        console.log(link);
         if ($(this).parent().next().is('ul')) {
             $('.accordion h3').each(function () {
                 $(this).removeClass('active-title');
@@ -35,9 +37,13 @@ jQuery(document).ready(function ($) {
             }*/
         }
         else {
-            location.href();
+            location.href = link;
         }
 
+    });
+
+    $('.sidebar-left_go-btn').on('click', function(){
+        location.href = $(this).attr('href');
     });
     /* $('.js-accordion_title').click(function(event) {
      event.preventDefault();
@@ -63,12 +69,12 @@ jQuery(document).ready(function($) {
 
       jQuery(".trust__carousel").owlCarousel({    
             navigation : false, 
-            items : 5,
+            items : 4,
             slideSpeed : 1000,
             paginationSpeed : 400,
             touchDrag: true,
             autoplayHoverPause: true,
-            items: [5],
+            items: [4],
             navigation: true,
             navigationText : false,
             pagination : false
