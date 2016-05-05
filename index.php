@@ -105,7 +105,7 @@ get_header(); // подключаем header.php ?>
 	<section class="home__form">
 		<!-- open .container -->
 		<div class="container">
-			<h2>Узнавайте о акциях первыми</h2>
+			<h2>Узнавайте о новых акциях первыми</h2>
 			<h4>Мы ежемесячно публикуем новые выгодные предложения для наших клиентов, <br /> чтобы узнавать о них одним из первых, внесите ваши данные в форму ниже прямо сейчас</h4>
 			<form action="#">
 				<input type="text" name="home__form_name" class="home__form_input" placeholder="Ваше имя или название организации"/>
