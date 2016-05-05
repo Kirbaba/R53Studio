@@ -35,7 +35,7 @@
     <div class="container">
         <!-- open .header__logo -->
         <div class="header__logo">
-            <a href="/">
+            <a href="<?= (is_home()) ? '#nowhere' : '/'; ?>">
                 <img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt=""/>
             </a>
 
@@ -55,7 +55,7 @@
         <!-- open .header__contacts -->
         <div class="header__contacts">
             <h3>
-                +375 
+                +375
                 <?= get_theme_mod('phone_1_textbox') ?>
                 <!--<span class="header__contacts_city">г.Минск</span>-->
             </h3>
