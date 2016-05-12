@@ -388,3 +388,31 @@
     10% {box-shadow: 0 0 8px 6px , 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px ;}
     100% {box-shadow: 0 0 8px 6px rgba(0,0,255, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(0,0,255, 0);}
 }
+
+.breadscrubs {
+	float: left;
+	width: 100%;
+	margin: 25px 0;
+	a {
+		padding: 0 10px;
+		position: relative;
+		color: #000;
+		&:hover, &:focus {
+			color: red;
+			text-decoration: underline;
+		}
+		&:after {
+			content: "/";
+			position: absolute;
+			right: -7px;
+		}
+		&:first-of-type {
+			padding-left: 0;
+		}
+		&:last-of-type {
+			&:after {
+				content: none;
+			}
+		}
+	}
+}

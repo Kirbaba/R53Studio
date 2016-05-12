@@ -419,17 +419,20 @@ add_shortcode('left-menu', 'leftMenuShortcode');
 
 function getMenuTree($arr){
 	$arr_new = [];
-	foreach($arr as $m_item){
-		if($m_item->menu_item_parent == 0){
-			$arr_new[$m_item->ID]['title'] = $m_item->title;
-			$arr_new[$m_item->ID]['url'] = $m_item->url;
-			$arr_new[$m_item->ID]['child'] = false;
-		}
-		else {
-			$arr_new[$m_item->menu_item_parent]['child'][$m_item->ID]['title'] = $m_item->title;
-			$arr_new[$m_item->menu_item_parent]['child'][$m_item->ID]['url'] = $m_item->url;
+	if(!empty($arr_new)){
+		foreach($arr as $m_item){
+			if($m_item->menu_item_parent == 0){
+				$arr_new[$m_item->ID]['title'] = $m_item->title;
+				$arr_new[$m_item->ID]['url'] = $m_item->url;
+				$arr_new[$m_item->ID]['child'] = false;
+			}
+			else {
+				$arr_new[$m_item->menu_item_parent]['child'][$m_item->ID]['title'] = $m_item->title;
+				$arr_new[$m_item->menu_item_parent]['child'][$m_item->ID]['url'] = $m_item->url;
+			}
 		}
 	}
+	
 	return $arr_new;
 }
 /*---------------------------------------------— КОНЕЦ НАМ ДОВЕРЯЮТ —------------------------------------------------------*/

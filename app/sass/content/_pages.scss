@@ -17,6 +17,100 @@
 	}
 }
 
+.page-portfolio {
+	@extend .page-contacts;
+	&__wrap {
+		@extend .page-contacts__wrap;
+		background-color: #FFF;
+	}
+	.workspace_page {
+		padding-right: 0;
+		h3 {
+			text-transform: uppercase;
+		}
+	}
+	&__content {
+		display: flex;
+		width: 100%;
+		-webkit-justify-content: space-between;
+		        justify-content: space-between;
+		-webkit-align-items: flex-start;
+		        align-items: flex-start;
+		-webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		        flex-wrap: wrap;
+	}
+	&__item {
+		color: #000;
+		width: 225px;
+		&_img {
+			height: 150px;
+			float: left;
+			width: 100%;
+			@include overflow-img;
+			margin-bottom: 15px;
+			img {
+				max-width: 200%;
+			}
+		}
+	}
+	&__tabmenu {
+		padding: 0;
+		margin: 15px 0;
+		li {
+			display: inline-block;
+			margin-right: 50px;
+			position: relative;
+			
+		}
+		
+		&_sub {
+			float: left;
+			width: 100%;
+			top: 100%;
+			margin: 15px 0;
+			padding: 0;
+			li {
+				display: inline-block;
+				a {
+					display: block;
+					float: left;
+					padding: 5px 15px;
+					color: red;
+					-webkit-border-radius: 5px;
+					        border-radius: 5px;
+					&:hover {
+						background-color: red;
+						color: #FFF;
+					}
+				}
+			}
+			&_active {
+				background-color: red;
+				color: #FFF!important;
+			}
+		}
+		&_btn {
+			color: red;
+			border: 1px solid red;
+			@include border-radius(10px);
+			display: block;
+			padding: 10px 15px;
+			&:hover, &:focus{
+				background-color: red;
+				color: #FFF;
+			}			
+		}
+		&_active {
+			a {
+				background-color: red;
+				color: #FFF;				
+			}	
+			
+		}
+	}
+}
+
 .ya_map {
 	float: left;
 	left: 0;

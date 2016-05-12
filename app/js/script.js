@@ -74,4 +74,9 @@ jQuery(document).ready(function($) {
     clock.setTime(440880);
     clock.setCountdown(true);
     clock.start();
+
+    $('.page-portfolio__tabmenu_btn').on("click", function(event) {
+		event.preventDefault();		 
+		$(this).find(".page-portfolio__tabmenu_sub").show();	
+	});
 });
