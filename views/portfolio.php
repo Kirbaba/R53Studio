@@ -20,33 +20,28 @@
 <!-- close .page-portfolio__tabmenu -->
 
 <!-- open .page-portfolio__tabmenu_sub -->
-<ul class="page-portfolio__tabmenu_sub">
-    <?php $i = 0; ?>
-    <?php foreach ($tax as $t): ?>
-        <?php $term = get_term($t, 'section'); ?>
-        <?php if (isset($_GET['sub'])): ?>
-            <?php if ($_GET['sub'] == $term->term_id): ?>
-                <li><a href="?sub=<?= $term->term_id ?>"
-                       class="page-portfolio__tabmenu_sub_active"><?= $term->name ?></a></li>
-            <?php else: ?>
-                <li><a href="?sub=<?= $term->term_id ?>"><?= $term->name ?></a></li>
-            <?php endif; ?>
-        <?php else: ?>
-            <?php if ($i == 0): ?>
-                <li><a href="?sub=<?= $term->term_id ?>"
-                       class="page-portfolio__tabmenu_sub_active"><?= $term->name ?></a></li>
-            <?php else: ?>
-                <li><a href="?sub=<?= $term->term_id ?>"><?= $term->name ?></a></li>
-            <?php endif ?>
-        <?php endif ?>
-        <?php $i++; ?>
-    <?php endforeach; ?>
-    <!--<li><a href="#" class="page-portfolio__tabmenu_sub_active">item 1</a></li>
-    <li><a href="#">item 2</a></li>
-    <li><a href="#">item 3</a></li>
-    <li><a href="#">item 4</a></li>
-    <li><a href="#">item 5</a></li>-->
-</ul>
+<!--<ul class="page-portfolio__tabmenu_sub">
+    <?php /*$i = 0; */?>
+    <?php /*foreach ($tax as $t): */?>
+        <?php /*$term = get_term($t, 'section'); */?>
+        <?php /*if (isset($_GET['sub'])): */?>
+            <?php /*if ($_GET['sub'] == $term->term_id): */?>
+                <li><a href="?sub=<?/*= $term->term_id */?>"
+                       class="page-portfolio__tabmenu_sub_active"><?/*= $term->name */?></a></li>
+            <?php /*else: */?>
+                <li><a href="?sub=<?/*= $term->term_id */?>"><?/*= $term->name */?></a></li>
+            <?php /*endif; */?>
+        <?php /*else: */?>
+            <?php /*if ($i == 0): */?>
+                <li><a href="?sub=<?/*= $term->term_id */?>"
+                       class="page-portfolio__tabmenu_sub_active"><?/*= $term->name */?></a></li>
+            <?php /*else: */?>
+                <li><a href="?sub=<?/*= $term->term_id */?>"><?/*= $term->name */?></a></li>
+            <?php /*endif */?>
+        <?php /*endif */?>
+        <?php /*$i++; */?>
+    <?php /*endforeach; */?>
+</ul>-->
 <!-- close .page-portfolio__tabmenu_sub -->
 
 <!-- open .page-portfolio__content -->

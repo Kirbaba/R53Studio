@@ -487,9 +487,7 @@ function myCustomInitPortfolio()
 function portfolioShortcode()
 {
 
-    $main_cat = '';
-
-    if(isset($_GET['sub'])){
+    /*if(isset($_GET['sub'])){
         $term_id = $_GET['sub'];
         $term = get_term($_GET['sub'], 'section');
         $parent_term = get_term($term->parent, 'section');
@@ -510,9 +508,19 @@ function portfolioShortcode()
         //prn($term);
         $term_id = $term->term_id;
         $main_cat = $_GET['cat'];
+    }*/
+
+    if(!isset($_GET['cat'])){
+        $tax_info = get_term_by( 'slug', 'out', 'section');//получаем id родительской категории
     }
-
-
+    else {
+        $tax_info = get_term_by( 'slug', $_GET['cat'], 'section');//получаем id родительской категории
+        $main_cat = $_GET['cat'];
+    }
+    
+    if(empty($main_cat)){
+        $main_cat = 'out';
+    }
     $args = array(
         'post_type' => 'portfolio',
         'post_status' => 'publish',
@@ -521,7 +529,7 @@ function portfolioShortcode()
             array(
                 'taxonomy' => 'section',
                 'field'    => 'id',
-                'terms'    => $term_id,
+                'terms'    => $tax_info->term_id,
             )
         )
     );
@@ -534,7 +542,6 @@ function portfolioShortcode()
     $parser = new Parser();
     $parser->render(TM_DIR . '/views/portfolio.php', [
         'my_query' => $my_query,
-        'tax' => $tax_child_id,
         'main_cat' => $main_cat,
     ]);
 
