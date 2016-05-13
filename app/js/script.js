@@ -37,13 +37,16 @@ jQuery(document).ready(function($) {
 		 event.preventDefault();
 		$('.show-info').fadeOut();
 		var current = ($(this).data('modal'));
-		$("."+current).fadeIn();	
+		$("."+current).fadeIn();
+		$('body').addClass('body-overflow');
+
 	});
 
 	$('.modal__home_close').on("click", function(event) {
 		 event.preventDefault();
 		$(this).parent().parent().parent().fadeOut();	
-		$('.show-info').fadeIn();	
+		$('.show-info').fadeIn();
+		$('body').removeClass('body-overflow');	
 	});
 
 	$('#callme').on("click", function(event) {
