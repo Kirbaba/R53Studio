@@ -517,7 +517,7 @@ function portfolioShortcode()
         $tax_info = get_term_by( 'slug', $_GET['cat'], 'section');//получаем id родительской категории
         $main_cat = $_GET['cat'];
     }
-    
+
     if(empty($main_cat)){
         $main_cat = 'out';
     }
@@ -535,6 +535,7 @@ function portfolioShortcode()
     );
 
     $my_query = null;
+
     $my_query = new WP_Query($args);
 
     //prn($my_query);
